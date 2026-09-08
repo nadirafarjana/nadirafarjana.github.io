@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Nadira Farjana</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .page-header {
+            max-width: 1100px;
+            margin: 80px auto 50px;
+            padding: 0 25px;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            max-width: 750px;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .projects-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 25px 80px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            border: 1px solid #e6e6e6;
+            border-radius: 14px;
+            padding: 30px;
+            background: #fff;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .project-number {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .project-card h2 {
+            font-size: 23px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .project-status {
+            margin-top: 18px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 20px;
+        }
+
+        .tech {
+            background: #f5f5f5;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .featured-project {
+            grid-column: 1 / -1;
+            background: #fafafa;
+        }
+
+        .featured-project h2 {
+            font-size: 29px;
+        }
+
+        .project-section-title {
+            margin: 50px 0 25px;
+            font-size: 28px;
+        }
+
+        @media (max-width: 768px) {
+
+            .page-header h1 {
+                font-size: 36px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-project {
+                grid-column: auto;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            Nadira Farjana
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="awards.html">Awards</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- Header -->
+
+<header class="page-header">
+
+    <h1>Projects</h1>
+
+    <p>
+        Selected engineering, embedded systems, renewable energy,
+        computer vision, and IoT projects developed through academic
+        coursework, research, competitions, and independent development.
+    </p>
+
+</header>
+
+
+<main class="projects-container">
+
+
+    <!-- Featured Projects -->
+
+    <h2 class="project-section-title">
+        Featured Projects
+    </h2>
+
+
+    <div class="project-grid">
+
+
+        <!-- Self Driving Car -->
+
+        <article class="project-card featured-project">
+
+            <div class="project-number">
+                01 · CAPSTONE PROJECT
+            </div>
+
+            <h2>
+                Self-Driving Car with Automatic Currency Counter
+                and Barcode Reader for Blind Individuals
+            </h2>
+
+            <p>
+                An assistive autonomous vehicle concept designed to support
+                visually impaired individuals through autonomous navigation,
+                object and currency recognition, and information assistance.
+                The project combines embedded systems, computer vision,
+                machine learning, and navigation technologies.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">Raspberry Pi</span>
+                <span class="tech">Computer Vision</span>
+                <span class="tech">OpenCV</span>
+                <span class="tech">Deep Learning</span>
+                <span class="tech">YOLO</span>
+                <span class="tech">GPS</span>
+
+            </div>
+
+            <div class="project-status">
+                April 2023 – Present
+            </div>
+
+        </article>
+
+
+        <!-- Off Grid Solar -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                02 · RENEWABLE ENERGY
+            </div>
+
+            <h2>
+                Design, Setup and Analysis of an Off-Grid Solar System
+            </h2>
+
+            <p>
+                Designed and implemented an off-grid solar energy system,
+                including system configuration, component selection,
+                installation, and performance analysis.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">Solar PV</span>
+                <span class="tech">Energy Systems</span>
+                <span class="tech">Electrical Design</span>
+
+            </div>
+
+            <div class="project-status">
+                May 13–26, 2024
+            </div>
+
+        </article>
+
+
+        <!-- Environment Monitor -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                03 · IoT & ENVIRONMENT
+            </div>
+
+            <h2>
+                IoT-Based Environment Monitoring System
+            </h2>
+
+            <p>
+                An embedded monitoring system designed to measure environmental
+                parameters and detect methane concentration using connected
+                sensors and a microcontroller platform.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">ESP32</span>
+                <span class="tech">MQ-4</span>
+                <span class="tech">Temperature Sensor</span>
+                <span class="tech">Bluetooth</span>
+                <span class="tech">IoT</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- GPS Tracking -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                04 · EMBEDDED SYSTEMS
+            </div>
+
+            <h2>
+                GPS Vehicle Tracking System
+            </h2>
+
+            <p>
+                Developed a GPS-based vehicle tracking system capable of
+                acquiring location information and transmitting tracking
+                data using GSM communication.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">Arduino</span>
+                <span class="tech">GPS</span>
+                <span class="tech">GSM</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Solar Tracker -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                05 · SOLAR ENERGY
+            </div>
+
+            <h2>
+                Single-Axis Solar Tracker
+            </h2>
+
+            <p>
+                Designed an automatic solar tracking system that adjusts
+                the panel orientation according to the detected light
+                intensity to improve solar energy capture.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">Arduino</span>
+                <span class="tech">LDR</span>
+                <span class="tech">Servo Motor</span>
+                <span class="tech">Solar Energy</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Smart Agriculture -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                06 · SMART AGRICULTURE
+            </div>
+
+            <h2>
+                Smart Agricultural System
+            </h2>
+
+            <p>
+                An IoT-enabled agricultural automation concept integrating
+                sensors, solar energy, and automated control to support
+                efficient agricultural management.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">IoT</span>
+                <span class="tech">Solar</span>
+                <span class="tech">Automation</span>
+                <span class="tech">Embedded Systems</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Cylinder Safety -->
+
+        <article class="project-card">
+
+            <div class="project-number">
+                07 · SAFETY & AUTOMATION
+            </div>
+
+            <h2>
+                Protection System from Cylinder-Related Disasters
+            </h2>
+
+            <p>
+                Designed an automated safety system using sensors and
+                communication technologies to detect hazardous conditions
+                and initiate protective actions.
+            </p>
+
+            <div class="tech-stack">
+
+                <span class="tech">Arduino</span>
+                <span class="tech">Automation</span>
+                <span class="tech">Servo Motor</span>
+                <span class="tech">GSM</span>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- Engineering Project Summary -->
+
+    <h2 class="project-section-title">
+        Engineering & Embedded Systems
+    </h2>
+
+
+    <div class="project-card">
+
+        <p>
+            My engineering projects span embedded systems, automation,
+            renewable energy, IoT, sensing, communication, and intelligent
+            systems. These projects have provided practical experience in
+            hardware integration, microcontroller programming, sensor
+            interfacing, system design, and problem solving.
+        </p>
+
+        <div class="tech-stack">
+
+            <span class="tech">Arduino</span>
+            <span class="tech">ESP32</span>
+            <span class="tech">Raspberry Pi</span>
+            <span class="tech">GPS</span>
+            <span class="tech">GSM</span>
+            <span class="tech">IoT</span>
+            <span class="tech">Sensors</span>
+            <span class="tech">Automation</span>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Nadira Farjana. All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
