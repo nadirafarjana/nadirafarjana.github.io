@@ -1,41 +1,66 @@
 /* =========================================================
-   NADIRA FARJANA — PORTFOLIO JAVASCRIPT
+   NADIRA FARJANA — PORTFOLIO JS
    ========================================================= */
 
 
-/* ================= MOBILE MENU ================= */
+/* -------------------------------
+   MOBILE MENU
+-------------------------------- */
 
-const menuButton = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-if (menuButton) {
+if (menuToggle && navMenu) {
 
-    menuButton.addEventListener("click", () => {
+    menuToggle.addEventListener("click", () => {
 
-        navLinks.classList.toggle("mobile-open");
+        navMenu.classList.toggle("active");
+
+    });
+
+
+    navMenu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("active");
+
+        });
 
     });
 
 }
 
 
-/* ================= CLOSE MOBILE MENU ================= */
+/* -------------------------------
+   NAVBAR ON SCROLL
+-------------------------------- */
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+const navbar = document.getElementById("navbar");
 
-    link.addEventListener("click", () => {
+window.addEventListener("scroll", () => {
 
-        navLinks.classList.remove("mobile-open");
+    if (window.scrollY > 40) {
 
-    });
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
 
 });
 
 
-/* ================= ACTIVE NAVIGATION ================= */
+/* -------------------------------
+   REVEAL ANIMATION
+-------------------------------- */
 
-const sections = document.querySelectorAll("section[id]");
-const navigationLinks = document.querySelectorAll(".nav-links a");
+const revealElements = document.querySelectorAll(
+    ".research-card, .project-card, .publication, .achievement-card, .featured-project, .highlight-card"
+);
+
 
 const observer = new IntersectionObserver(
 
@@ -45,20 +70,9 @@ const observer = new IntersectionObserver(
 
             if (entry.isIntersecting) {
 
-                navigationLinks.forEach(link => {
+                entry.target.classList.add("visible");
 
-                    link.classList.remove("active");
-
-                    if (
-                        link.getAttribute("href") ===
-                        "#" + entry.target.id
-                    ) {
-
-                        link.classList.add("active");
-
-                    }
-
-                });
+                observer.unobserve(entry.target);
 
             }
 
@@ -67,65 +81,56 @@ const observer = new IntersectionObserver(
     },
 
     {
-        threshold: 0.25
+        threshold: 0.08
     }
 
 );
 
-sections.forEach(section => {
-
-    observer.observe(section);
-
-});
-
-
-/* ================= REVEAL ANIMATION ================= */
-
-const revealElements = document.querySelectorAll(
-    ".research-card, .project-card, .timeline-item, .achievement, .publication-card"
-);
-
-const revealObserver = new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("revealed");
-
-                revealObserver.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.12
-    }
-
-);
 
 revealElements.forEach(element => {
 
     element.classList.add("reveal");
 
-    revealObserver.observe(element);
+    observer.observe(element);
 
 });
 
 
-/* ================= YEAR ================= */
+/* -------------------------------
+   ACTIVE NAVIGATION
+-------------------------------- */
 
-const yearElements = document.querySelectorAll(
-    "[data-current-year]"
-);
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a[href^='#']");
 
-yearElements.forEach(element => {
 
-    element.textContent = new Date().getFullYear();
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
 
 });
