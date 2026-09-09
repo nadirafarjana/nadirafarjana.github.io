@@ -2,104 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Nadira Farjana | EEE Researcher</title>
 
     <meta name="description"
-          content="Nadira Farjana — Electrical & Electronic Engineering researcher working in computational materials, photovoltaics, renewable energy and intelligent systems.">
+        content="Nadira Farjana — Electrical & Electronic Engineering researcher working across AI, robotics, computational materials, photovoltaics, renewable energy and intelligent embedded systems.">
 
-    <meta name="author"
-          content="Nadira Farjana">
-
-    <title>Nadira Farjana — EEE Researcher</title>
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
 <!-- ================= NAVIGATION ================= -->
 
-<header class="navbar">
+<header class="navbar" id="navbar">
 
     <div class="nav-container">
 
         <a href="#home" class="logo">
-            NF<span>.</span>
+            <span>N</span>
+            Nadira Farjana
         </a>
 
-        <nav class="nav-links">
-            <a href="#research">Research</a>
-            <a href="#publication">Publication</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <a href="assets/cv.pdf"
-           class="nav-cv"
-           target="_blank">
-            CV ↗
-        </a>
-
-        <button class="menu-toggle"
-                aria-label="Open menu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
             ☰
         </button>
+
+        <nav id="navMenu">
+
+            <a href="#home">Home</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+            <a href="assets/Nadira_Farjana_CV.pdf"
+               class="nav-cv"
+               target="_blank">
+                CV ↗
+            </a>
+
+        </nav>
 
     </div>
 
 </header>
 
 
-<main>
-
-
 <!-- ================= HERO ================= -->
+
+<main>
 
 <section class="hero" id="home">
 
-    <div class="hero-grid">
+    <div class="hero-container">
 
         <div class="hero-content">
 
             <div class="eyebrow">
-                <span class="status-dot"></span>
-                EEE RESEARCHER · BANGLADESH
+                ELECTRICAL & ELECTRONIC ENGINEERING
             </div>
 
             <h1>
-                Building at the
-                <em>intersection</em>
-                of materials, energy & intelligence.
+                Nadira<br>
+                <span>Farjana</span>
             </h1>
 
+            <h2>
+                AI & Robotics · Computational Materials · Renewable Energy
+            </h2>
+
             <p class="hero-description">
-                I explore emerging energy materials and intelligent
-                engineering systems through first-principles calculations,
-                photovoltaic device simulation and machine learning.
+
+                I work at the intersection of intelligent systems,
+                emerging materials, and sustainable energy — combining
+                machine learning, robotics, embedded systems,
+                first-principles calculations, and photovoltaic
+                device simulation.
+
             </p>
 
-            <div class="hero-actions">
+            <div class="hero-buttons">
 
-                <a href="#research"
-                   class="button button-primary">
-                    Explore research
-                    <span>↓</span>
+                <a href="#research" class="btn btn-primary">
+                    Explore My Work
                 </a>
 
-                <a href="assets/cv.pdf"
-                   class="button button-secondary"
+                <a href="assets/Nadira_Farjana_CV.pdf"
+                   class="btn btn-outline"
                    target="_blank">
-                    View CV
-                    <span>↗</span>
+                    Download CV
                 </a>
 
             </div>
@@ -107,18 +108,18 @@
             <div class="hero-meta">
 
                 <div>
-                    <strong>B.Sc.</strong>
-                    <span>Electrical & Electronic Engineering</span>
+                    <strong>03.63</strong>
+                    <span>CGPA / 4.00</span>
                 </div>
 
                 <div>
-                    <strong>3.63 / 4.00</strong>
-                    <span>CGPA</span>
+                    <strong>03rd</strong>
+                    <span>Class Rank / 33</span>
                 </div>
 
                 <div>
-                    <strong>3rd / 33</strong>
-                    <span>Class Rank</span>
+                    <strong>EEE</strong>
+                    <span>JSTU</span>
                 </div>
 
             </div>
@@ -128,70 +129,45 @@
 
         <div class="hero-visual">
 
-            <div class="orb orb-one"></div>
-            <div class="orb orb-two"></div>
+            <div class="portrait-frame">
 
-            <div class="scientific-card">
+                <img src="assets/profile.jpg"
+                     alt="Nadira Farjana">
 
-                <div class="card-top">
-                    <span>RESEARCH / 01</span>
-                    <span>2026</span>
+                <div class="portrait-label">
+                    <span>Researcher</span>
+                    <span>Engineer</span>
                 </div>
 
-                <div class="atom-visual">
+            </div>
 
-                    <div class="atom-core">
-                        Mg
-                    </div>
+            <div class="floating-card card-ai">
+                <span>01</span>
+                AI & Robotics
+            </div>
 
-                    <div class="orbit orbit-a">
-                        <span>Cl</span>
-                    </div>
+            <div class="floating-card card-materials">
+                <span>02</span>
+                Computational Materials
+            </div>
 
-                    <div class="orbit orbit-b">
-                        <span>Br</span>
-                    </div>
-
-                    <div class="orbit orbit-c">
-                        <span>P</span>
-                    </div>
-
-                </div>
-
-                <div class="card-bottom">
-
-                    <span>
-                        COMPUTATIONAL<br>
-                        MATERIALS
-                    </span>
-
-                    <span class="arrow">
-                        ↗
-                    </span>
-
-                </div>
-
+            <div class="floating-card card-energy">
+                <span>03</span>
+                Renewable Energy
             </div>
 
         </div>
 
     </div>
 
-
-    <div class="scroll-indicator">
-        <span>SCROLL TO EXPLORE</span>
-        <div class="scroll-line"></div>
-    </div>
-
 </section>
 
 
-<!-- ================= RESEARCH ================= -->
+<!-- ================= INTRO ================= -->
 
-<section class="section research-section"
-         id="research">
+<section class="intro-section">
 
-    <div class="section-header">
+    <div class="section-container intro-grid">
 
         <div class="section-number">
             01
@@ -199,201 +175,148 @@
 
         <div>
 
-            <p class="section-label">
-                RESEARCH FOCUS
+            <p class="large-text">
+                I am an Electrical & Electronic Engineering graduate
+                interested in solving real-world problems through
+                <strong>intelligent engineering systems,
+                computational science, and sustainable technology.</strong>
             </p>
 
-            <h2>
-                Questions I am
-                <span>exploring.</span>
-            </h2>
+            <p class="intro-small">
+
+                My work ranges from computer vision and autonomous
+                robotics to density functional theory, photovoltaic
+                device modeling, IoT systems, and renewable-energy
+                technologies.
+
+            </p>
 
         </div>
-
-    </div>
-
-
-    <div class="research-intro">
-
-        <p>
-            My work sits at the intersection of computational materials
-            science, photovoltaic technologies and intelligent engineering.
-            I am interested in understanding materials at the fundamental
-            level and translating that understanding into practical
-            energy technologies.
-        </p>
-
-    </div>
-
-
-    <div class="research-grid">
-
-        <article class="research-card featured">
-
-            <div class="research-number">
-                01
-            </div>
-
-            <div class="research-icon">
-                ◇
-            </div>
-
-            <h3>
-                Computational<br>
-                Materials
-            </h3>
-
-            <p>
-                First-principles investigation of structural, electronic,
-                optical, mechanical, thermal and phonon properties of
-                emerging semiconductor and halide materials.
-            </p>
-
-            <div class="tag-list">
-                <span>DFT</span>
-                <span>Quantum ESPRESSO</span>
-                <span>Phonons</span>
-            </div>
-
-        </article>
-
-
-        <article class="research-card">
-
-            <div class="research-number">
-                02
-            </div>
-
-            <div class="research-icon">
-                ◉
-            </div>
-
-            <h3>
-                Photovoltaic<br>
-                Materials
-            </h3>
-
-            <p>
-                Perovskite solar cells, semiconductor heterojunctions,
-                charge transport layers and SCAPS-1D based photovoltaic
-                device simulation and optimization.
-            </p>
-
-            <div class="tag-list">
-                <span>SCAPS-1D</span>
-                <span>Perovskites</span>
-                <span>Solar Cells</span>
-            </div>
-
-        </article>
-
-
-        <article class="research-card">
-
-            <div class="research-number">
-                03
-            </div>
-
-            <div class="research-icon">
-                ⌁
-            </div>
-
-            <h3>
-                AI & Intelligent<br>
-                Systems
-            </h3>
-
-            <p>
-                Machine learning, deep learning, computer vision,
-                embedded systems and intelligent engineering
-                applications.
-            </p>
-
-            <div class="tag-list">
-                <span>Machine Learning</span>
-                <span>Computer Vision</span>
-                <span>IoT</span>
-            </div>
-
-        </article>
 
     </div>
 
 </section>
 
 
-<!-- ================= CURRENT RESEARCH ================= -->
+<!-- ================= RESEARCH ================= -->
 
-<section class="dark-section" id="thesis">
+<section class="section" id="research">
 
-    <div class="dark-container">
+    <div class="section-container">
 
-        <div class="dark-label">
-            CURRENT RESEARCH
-        </div>
-
-        <div class="thesis-grid">
+        <div class="section-heading">
 
             <div>
-
-                <span class="research-status">
-                    UNDERGRADUATE THESIS · 2026
-                </span>
+                <span class="section-label">02 — RESEARCH</span>
 
                 <h2>
-                    First-Principles Investigation of
-                    Composition-Driven Properties in
-                    <span>Mixed-Halide Mg₃PCl₃₋ₓBrₓ</span>
-                    Materials
+                    Three connected<br>
+                    research directions.
                 </h2>
+            </div>
+
+            <p>
+                My research interests combine intelligent systems,
+                computational materials and sustainable energy
+                technologies.
+            </p>
+
+        </div>
+
+
+        <div class="research-grid">
+
+
+            <!-- AI -->
+
+            <article class="research-card research-ai">
+
+                <div class="research-number">01</div>
+
+                <div class="research-icon">◉</div>
+
+                <h3>
+                    AI, Robotics &<br>
+                    Intelligent Systems
+                </h3>
 
                 <p>
-                    Investigating composition-dependent structural,
-                    electronic, optical, mechanical, thermal and phonon
-                    properties of Mg₃PCl₃₋ₓBrₓ materials for
-                    x = 0, 1, 2 and 3 using first-principles calculations.
+                    Developing intelligent systems that combine
+                    computer vision, deep learning, embedded
+                    computing and autonomous decision-making.
                 </p>
 
-                <div class="thesis-tags">
+                <div class="tags">
+                    <span>Computer Vision</span>
+                    <span>Deep Learning</span>
+                    <span>YOLO</span>
+                    <span>Robotics</span>
+                    <span>Embedded AI</span>
+                    <span>Raspberry Pi</span>
+                </div>
+
+            </article>
+
+
+            <!-- MATERIALS -->
+
+            <article class="research-card research-materials">
+
+                <div class="research-number">02</div>
+
+                <div class="research-icon">◇</div>
+
+                <h3>
+                    Computational Materials<br>
+                    & Device Modeling
+                </h3>
+
+                <p>
+                    Investigating emerging semiconductor and
+                    photovoltaic materials using first-principles
+                    calculations and device-level simulation.
+                </p>
+
+                <div class="tags">
                     <span>DFT</span>
                     <span>Quantum ESPRESSO</span>
+                    <span>SCAPS-1D</span>
+                    <span>Perovskites</span>
                     <span>Electronic Structure</span>
-                    <span>Optical Properties</span>
-                    <span>Mechanical Properties</span>
-                    <span>Thermal Properties</span>
-                    <span>Phonons</span>
                 </div>
 
-            </div>
+            </article>
 
 
-            <div class="thesis-diagram">
+            <!-- ENERGY -->
 
-                <div class="diagram-circle">
+            <article class="research-card research-energy">
 
-                    <div class="diagram-core">
-                        Mg₃P
-                    </div>
+                <div class="research-number">03</div>
 
-                    <div class="diagram-node node-one">
-                        Cl
-                    </div>
+                <div class="research-icon">△</div>
 
-                    <div class="diagram-node node-two">
-                        Br
-                    </div>
+                <h3>
+                    Renewable Energy<br>
+                    & Sustainable Systems
+                </h3>
 
-                    <div class="diagram-node node-three">
-                        x
-                    </div>
+                <p>
+                    Exploring photovoltaic technologies,
+                    off-grid systems, energy monitoring,
+                    environmental sensing and sustainable
+                    engineering solutions.
+                </p>
 
+                <div class="tags">
+                    <span>Solar Energy</span>
+                    <span>Photovoltaics</span>
+                    <span>IoT</span>
+                    <span>Energy Systems</span>
+                    <span>Environmental Monitoring</span>
                 </div>
 
-                <div class="diagram-caption">
-                    COMPOSITION → STRUCTURE → PROPERTIES
-                </div>
-
-            </div>
+            </article>
 
         </div>
 
@@ -402,120 +325,178 @@
 </section>
 
 
-<!-- ================= PUBLICATION ================= -->
+<!-- ================= FEATURED WORK ================= -->
 
-<section class="section publication-section"
-         id="publication">
+<section class="section featured-section">
 
-    <div class="section-header">
+    <div class="section-container">
 
-        <div class="section-number">
-            02
-        </div>
+        <div class="section-heading">
 
-        <div>
+            <div>
+                <span class="section-label">03 — FEATURED WORK</span>
 
-            <p class="section-label">
-                SELECTED PUBLICATION
-            </p>
-
-            <h2>
-                Research that made
-                <span>it out.</span>
-            </h2>
-
-        </div>
-
-    </div>
-
-
-    <article class="publication-card">
-
-        <div class="publication-year">
-            2025
-        </div>
-
-        <div class="publication-main">
-
-            <div class="publication-status">
-                PUBLISHED · SOLAR ENERGY
+                <h2>
+                    Research & engineering<br>
+                    that define my work.
+                </h2>
             </div>
 
-            <h3>
-                Numerical simulation and performance enhancement
-                of CsBi₃I₁₀-based heterojunction solar cell with
-                various semiconductor layers along with machine
-                learning-based analysis
-            </h3>
+        </div>
 
-            <p>
-                Solar Energy · Volume 295 · Article 113539
-            </p>
 
-            <div class="publication-actions">
+        <!-- FEATURE 1 -->
 
-                <a href="https://doi.org/10.1016/j.solener.2025.113539"
-                   target="_blank"
-                   class="text-link">
-                    View publication
-                    <span>↗</span>
+        <article class="featured-project featured-dark">
+
+            <div class="featured-image">
+
+                <img
+                    src="assets/Projects/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-Learning/project.jpg"
+                    alt="Assistive autonomous vehicle">
+
+            </div>
+
+            <div class="featured-content">
+
+                <span class="project-category">
+                    AI · ROBOTICS · COMPUTER VISION
+                </span>
+
+                <h3>
+                    An Integrated Assistive System for
+                    Visually Impaired Individuals
+                </h3>
+
+                <p>
+                    An intelligent assistive platform integrating
+                    autonomous navigation, deep-learning-based
+                    object detection, Bangladeshi currency
+                    recognition, GPS/GSM tracking and safety
+                    functions.
+                </p>
+
+                <div class="outcome">
+                    <strong>Outcome</strong>
+
+                    <p>
+                        Demonstrated 85% navigation success across
+                        20 controlled trials, with strong YOLO-based
+                        detection performance for stop signs,
+                        obstacles and currency.
+                    </p>
+                </div>
+
+                <a
+                    href="https://github.com/nadirafarjana/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-Learning"
+                    target="_blank"
+                    class="text-link">
+                    View GitHub Repository ↗
                 </a>
 
             </div>
 
-        </div>
-
-        <div class="publication-mark">
-            SE
-        </div>
-
-    </article>
+        </article>
 
 
-    <div class="other-publications">
+        <!-- FEATURE 2 -->
 
-        <div class="mini-publication">
+        <article class="featured-project featured-light">
 
-            <span>2026</span>
+            <div class="featured-content">
 
-            <div>
-                <strong>
-                    Device modeling and performance analysis of
-                    CsGeI₂Br-based single junction and
-                    CsGeI₂Br/GaAs-based heterojunction
-                    perovskite solar cells
-                </strong>
+                <span class="project-category">
+                    DFT · COMPUTATIONAL MATERIALS
+                </span>
 
-                <small>
-                    Luminescence · Journal Manuscript · Submitted
-                </small>
+                <h3>
+                    Mg₃PCl₃₋ₓBrₓ Mixed-Halide Materials
+                </h3>
+
+                <p>
+                    First-principles investigation of composition-
+                    driven structural, electronic, optical,
+                    mechanical and phonon properties of lead-free
+                    mixed-halide phosphide compounds.
+                </p>
+
+                <div class="research-result-grid">
+
+                    <div>
+                        <strong>4</strong>
+                        <span>Compositions</span>
+                    </div>
+
+                    <div>
+                        <strong>DFT</strong>
+                        <span>Method</span>
+                    </div>
+
+                    <div>
+                        <strong>QE</strong>
+                        <span>Platform</span>
+                    </div>
+
+                </div>
+
+                <a href="#publications"
+                   class="text-link">
+                    Explore Research ↗
+                </a>
+
             </div>
 
-            <span>→</span>
+            <div class="featured-visual material-visual">
 
-        </div>
+                <div class="atom atom-one"></div>
+                <div class="atom atom-two"></div>
+                <div class="atom atom-three"></div>
 
-
-        <div class="mini-publication">
-
-            <span>2026</span>
-
-            <div>
-                <strong>
-                    Computational Analysis, Performance Enhancement
-                    and Comparison of Cs₂SnBr₆, ZnSnN₂, and
-                    Cs₂SnBr₆/ZnSnN₂-based Perovskite Solar Cells
-                </strong>
-
-                <small>
-                    iCONNECT 2026 · Conference Paper · Submitted
-                </small>
+                <div class="material-label">
+                    Mg₃PCl₃₋ₓBrₓ
+                </div>
 
             </div>
 
-            <span>→</span>
+        </article>
 
-        </div>
+
+        <!-- FEATURE 3 -->
+
+        <article class="featured-project featured-energy">
+
+            <div class="featured-image">
+
+                <img
+                    src="assets/Projects/Design, Set up and Analysis of Off-Grid Solar System/project.jpg"
+                    alt="Off-grid solar system">
+
+            </div>
+
+            <div class="featured-content">
+
+                <span class="project-category">
+                    PHOTOVOLTAICS · RENEWABLE ENERGY
+                </span>
+
+                <h3>
+                    Off-Grid Solar Energy System
+                </h3>
+
+                <p>
+                    Design, setup and analysis of an off-grid
+                    photovoltaic system for independent electrical
+                    power generation and energy management.
+                </p>
+
+                <a href="#projects"
+                   class="text-link">
+                    View Engineering Projects ↗
+                </a>
+
+            </div>
+
+        </article>
 
     </div>
 
@@ -524,224 +505,471 @@
 
 <!-- ================= PROJECTS ================= -->
 
-<section class="section projects-section"
-         id="projects">
+<section class="section projects-section" id="projects">
 
-    <div class="section-header">
+    <div class="section-container">
 
-        <div class="section-number">
-            03
-        </div>
+        <div class="section-heading">
 
-        <div>
+            <div>
+                <span class="section-label">04 — PROJECTS</span>
 
-            <p class="section-label">
-                ENGINEERING
+                <h2>
+                    From ideas to<br>
+                    working systems.
+                </h2>
+            </div>
+
+            <p>
+                Selected engineering projects spanning AI,
+                robotics, IoT, embedded systems and renewable
+                energy.
             </p>
 
-            <h2>
-                From equations to
-                <span>working systems.</span>
-            </h2>
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/AgroSmart: Solar-Powered Intelligent Agricultural System/project.jpg"
+                        alt="AgroSmart">
+
+                    <span class="project-index">01</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        AI · AGRICULTURE · SOLAR
+                    </span>
+
+                    <h3>
+                        AgroSmart
+                    </h3>
+
+                    <p>
+                        Solar-powered intelligent agricultural
+                        system designed for smart and sustainable
+                        farming applications.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana/AgroSmart-Solar-Powered-Intelligent-Agricultural-System"
+                            target="_blank">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/Arduino-Based Wireless Environmental Monitoring and Methane Gas Detection Using Bluetooth/project.jpg"
+                        alt="Environmental monitoring">
+
+                    <span class="project-index">02</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        IOT · ENVIRONMENT
+                    </span>
+
+                    <h3>
+                        Wireless Environmental Monitoring
+                    </h3>
+
+                    <p>
+                        Arduino-based monitoring system using
+                        methane sensing, temperature measurement
+                        and Bluetooth communication.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana/Arduino-Based-Wireless-Environmental-Monitoring-and-Methane-Gas-Detection-Using-Bluetooth"
+                            target="_blank">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/IoT-Based-Biogas-Plant-Monitoring-System/project.jpg"
+                        alt="Biogas monitoring">
+
+                    <span class="project-index">03</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        IOT · ENERGY
+                    </span>
+
+                    <h3>
+                        IoT-Based Biogas Plant Monitoring
+                    </h3>
+
+                    <p>
+                        ESP32-based real-time monitoring system
+                        using sensor data acquisition, MQTT and
+                        remote monitoring.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana/IoT-Based-Biogas-Plant-Monitoring-System"
+                            target="_blank">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/SolarTrack: Arduino-Based Automatic Solar Tracking System/project.jpg"
+                        alt="SolarTrack">
+
+                    <span class="project-index">04</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        SOLAR · EMBEDDED
+                    </span>
+
+                    <h3>
+                        SolarTrack
+                    </h3>
+
+                    <p>
+                        Arduino-based automatic solar tracking
+                        system designed to improve solar energy
+                        harvesting through panel orientation.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana/SolarTrack-Arduino-Based-Automatic-Solar-Tracking-System"
+                            target="_blank">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 5 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/FireGuard: Arduino-Based Automatic Fire Fighting System/project.jpg"
+                        alt="FireGuard">
+
+                    <span class="project-index">05</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        EMBEDDED · SAFETY
+                    </span>
+
+                    <h3>
+                        FireGuard
+                    </h3>
+
+                    <p>
+                        Arduino-based automatic fire detection
+                        and suppression system for rapid response
+                        to fire hazards.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana/Automatic-Fire-Detection-and-Suppression-System"
+                            target="_blank">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 6 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/HomeWire: Electrical House Wiring and Load Control Board/project.jpg"
+                        alt="HomeWire">
+
+                    <span class="project-index">06</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        ELECTRICAL · HARDWARE
+                    </span>
+
+                    <h3>
+                        HomeWire
+                    </h3>
+
+                    <p>
+                        Electrical house-wiring and load-control
+                        board designed to demonstrate practical
+                        residential electrical systems.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana"
+                            target="_blank">
+                            GitHub Profile ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 7 -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="assets/Projects/SCRBuck: SCR-Based DC Buck Converter System/project.jpg"
+                        alt="SCR Buck converter">
+
+                    <span class="project-index">07</span>
+
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        POWER ELECTRONICS
+                    </span>
+
+                    <h3>
+                        SCRBuck
+                    </h3>
+
+                    <p>
+                        SCR-based DC buck converter designed to
+                        investigate controlled voltage conversion
+                        from high DC voltage to a lower level.
+                    </p>
+
+                    <div class="project-footer">
+
+                        <a
+                            href="https://github.com/nadirafarjana"
+                            target="_blank">
+                            GitHub Profile ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
 
         </div>
 
-    </div>
+        <div class="center-button">
 
+            <a
+                href="https://github.com/nadirafarjana?tab=repositories"
+                target="_blank"
+                class="btn btn-dark">
+                View All GitHub Projects ↗
+            </a>
 
-    <div class="projects-grid">
-
-
-        <article class="project-card project-large">
-
-            <div class="project-image vehicle-image">
-
-                <div class="project-overlay">
-                    COMPUTER VISION · AI · ROBOTICS
-                </div>
-
-            </div>
-
-            <div class="project-content">
-
-                <div class="project-index">
-                    01
-                </div>
-
-                <h3>
-                    Self-Driving Assistive Vehicle
-                </h3>
-
-                <p>
-                    Autonomous assistive system integrating navigation,
-                    computer vision, deep-learning based currency
-                    recognition, barcode reading and real-time GPS tracking.
-                </p>
-
-                <div class="project-tools">
-                    <span>Raspberry Pi</span>
-                    <span>Python</span>
-                    <span>YOLO</span>
-                    <span>GPS</span>
-                </div>
-
-                <a href="#contact" class="project-link">
-                    Project details ↗
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <div class="project-image solar-image">
-
-                <div class="project-overlay">
-                    RENEWABLE ENERGY
-                </div>
-
-            </div>
-
-            <div class="project-content">
-
-                <div class="project-index">
-                    02
-                </div>
-
-                <h3>
-                    Off-Grid Solar System
-                </h3>
-
-                <p>
-                    Design, setup and analysis of an off-grid solar
-                    energy system for practical renewable-energy
-                    applications.
-                </p>
-
-                <div class="project-tools">
-                    <span>Solar PV</span>
-                    <span>Battery</span>
-                    <span>Power Electronics</span>
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="project-card">
-
-            <div class="project-image environment-image">
-
-                <div class="project-overlay">
-                    IoT · ENVIRONMENT
-                </div>
-
-            </div>
-
-            <div class="project-content">
-
-                <div class="project-index">
-                    03
-                </div>
-
-                <h3>
-                    IoT Environment Monitoring
-                </h3>
-
-                <p>
-                    ESP32-based environmental monitoring system integrating
-                    methane sensing, temperature and humidity measurement,
-                    Bluetooth and cloud connectivity.
-                </p>
-
-                <div class="project-tools">
-                    <span>ESP32</span>
-                    <span>MQ-4</span>
-                    <span>IoT</span>
-                </div>
-
-            </div>
-
-        </article>
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ================= PUBLICATIONS ================= -->
 
-<section class="about-section"
-         id="about">
+<section class="section publications-section" id="publications">
 
-    <div class="about-grid">
+    <div class="section-container">
 
-        <div class="about-title">
+        <div class="section-heading">
 
-            <span class="section-label">
-                04 / ABOUT
-            </span>
+            <div>
+                <span class="section-label">05 — PUBLICATIONS</span>
 
-            <h2>
-                Engineer by training.
-                <br>
-                Researcher by curiosity.
-            </h2>
+                <h2>
+                    Research beyond<br>
+                    the laboratory.
+                </h2>
+            </div>
 
         </div>
 
 
-        <div class="about-content">
-
-            <p class="about-lead">
-                I am an Electrical & Electronic Engineering researcher
-                interested in understanding how materials, energy and
-                intelligent systems can come together to solve practical
-                problems.
-            </p>
-
-            <p>
-                My academic journey began with hands-on engineering projects
-                involving embedded systems, renewable energy, automation
-                and computer vision. This gradually led me toward
-                computational materials science and photovoltaic research.
-            </p>
-
-            <p>
-                Today, my work combines first-principles calculations,
-                photovoltaic device simulation and machine learning.
-                I am particularly interested in sustainable energy,
-                next-generation electronic materials and intelligent
-                engineering systems.
-            </p>
+        <div class="publication-list">
 
 
-            <div class="about-details">
+            <article class="publication">
 
-                <div>
-                    <span>EDUCATION</span>
-                    <strong>
-                        B.Sc. Electrical & Electronic Engineering
-                    </strong>
-                    <small>
-                        Jamalpur Science & Technology University
-                    </small>
+                <div class="publication-year">
+                    2025
                 </div>
 
                 <div>
-                    <span>INTERESTS</span>
-                    <strong>
-                        Materials · Energy · AI
-                    </strong>
-                    <small>
-                        Computational research & intelligent systems
-                    </small>
+
+                    <span class="publication-status published">
+                        PUBLISHED · SOLAR ENERGY
+                    </span>
+
+                    <h3>
+                        Numerical simulation and performance
+                        enhancement of CsBi₃I₁₀-based heterojunction
+                        solar cell with various semiconductor layers
+                        along with machine learning-based analysis
+                    </h3>
+
+                    <p>
+                        Solar Energy, Volume 295, Article 113539.
+                    </p>
+
+                    <a
+                        href="https://doi.org/10.1016/j.solener.2025.113539"
+                        target="_blank">
+                        DOI ↗
+                    </a>
+
                 </div>
 
-            </div>
+            </article>
+
+
+            <article class="publication">
+
+                <div class="publication-year">
+                    2026
+                </div>
+
+                <div>
+
+                    <span class="publication-status submitted">
+                        SUBMITTED · LUMINESCENCE
+                    </span>
+
+                    <h3>
+                        Device modeling and performance analysis of
+                        CsGeI₂Br-based single junction and
+                        CsGeI₂Br/GaAs-based heterojunction
+                        perovskite solar cell with appropriate
+                        charge transport layers
+                    </h3>
+
+                </div>
+
+            </article>
+
+
+            <article class="publication">
+
+                <div class="publication-year">
+                    2026
+                </div>
+
+                <div>
+
+                    <span class="publication-status submitted">
+                        CONFERENCE PAPER · iCONNECT 2026
+                    </span>
+
+                    <h3>
+                        Computational Analysis, Performance
+                        Enhancement and Comparison of Cs₂SnBr₆,
+                        ZnSnN₂, and Cs₂SnBr₆/ZnSnN₂-based
+                        Perovskite Solar Cells
+                    </h3>
+
+                </div>
+
+            </article>
+
 
         </div>
 
@@ -750,117 +978,79 @@
 </section>
 
 
-<!-- ================= JOURNEY ================= -->
+<!-- ================= RESEARCH HIGHLIGHTS ================= -->
 
-<section class="section journey-section">
+<section class="section highlights-section">
 
-    <div class="section-header">
+    <div class="section-container">
 
-        <div class="section-number">
-            05
-        </div>
-
-        <div>
-
-            <p class="section-label">
-                JOURNEY
-            </p>
-
-            <h2>
-                A path from
-                <span>engineering to research.</span>
-            </h2>
-
-        </div>
-
-    </div>
-
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <span class="timeline-year">
-                2023
-            </span>
+        <div class="section-heading">
 
             <div>
-                <h3>
-                    Engineering & Intelligent Systems
-                </h3>
-
-                <p>
-                    Developed embedded systems, robotics, automation
-                    and assistive engineering projects.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item">
-
-            <span class="timeline-year">
-                2024
-            </span>
-
-            <div>
-                <h3>
-                    Renewable Energy & Computational Research
-                </h3>
-
-                <p>
-                    Worked on renewable-energy projects and expanded
-                    into photovoltaic device simulation and
-                    computational research.
-                </p>
-            </div>
-
-        </div>
-
-
-        <div class="timeline-item highlight">
-
-            <span class="timeline-year">
-                2025
-            </span>
-
-            <div>
-
-                <span class="timeline-badge">
-                    MILESTONE
+                <span class="section-label">
+                    06 — RESEARCH HIGHLIGHTS
                 </span>
 
-                <h3>
-                    First Journal Publication
-                </h3>
-
-                <p>
-                    Research on CsBi₃I₁₀-based heterojunction solar
-                    cells was published in Solar Energy.
-                </p>
-
+                <h2>
+                    Conferences, posters<br>
+                    & research activities.
+                </h2>
             </div>
+
+            <p>
+                Selected moments from research presentations,
+                academic activities and technical events.
+            </p>
 
         </div>
 
 
-        <div class="timeline-item">
+        <div class="highlight-gallery">
 
-            <span class="timeline-year">
-                2026
-            </span>
+            <div class="highlight-card large">
 
-            <div>
+                <img
+                    src="assets/Poster Presentation/poster.jpg"
+                    alt="Research poster presentation">
+
+                <div class="highlight-caption">
+                    <span>Research Presentation</span>
+                    <h3>Poster Presentation</h3>
+                </div>
+
+            </div>
+
+
+            <div class="highlight-card">
+
+                <img
+                    src="assets/Poster Presentation/presentation.jpg"
+                    alt="Research presentation">
+
+                <div class="highlight-caption">
+                    <span>Academic Activity</span>
+                    <h3>Research Presentation</h3>
+                </div>
+
+            </div>
+
+
+            <div class="highlight-card text-highlight">
+
+                <span>RESEARCH</span>
+
                 <h3>
-                    Computational Materials & AI
+                    Combining computational science with
+                    real-world engineering.
                 </h3>
 
                 <p>
-                    Advanced first-principles research on mixed-halide
-                    materials while expanding work in machine learning
-                    and intelligent engineering systems.
+                    From DFT simulations to autonomous robots,
+                    my projects are driven by the same goal:
+                    developing practical and scientifically
+                    grounded solutions.
                 </p>
+
             </div>
 
         </div>
@@ -872,24 +1062,24 @@
 
 <!-- ================= ACHIEVEMENTS ================= -->
 
-<section class="dark-section achievements-section">
+<section class="section achievements-section" id="achievements">
 
-    <div class="dark-container">
+    <div class="section-container">
 
-        <div class="dark-label">
-            06 / RECOGNITION
-        </div>
+        <div class="section-heading">
 
-        <div class="achievement-heading">
+            <div>
+                <span class="section-label">07 — ACHIEVEMENTS</span>
 
-            <h2>
-                Built through
-                <span>competition.</span>
-            </h2>
+                <h2>
+                    Recognition for<br>
+                    engineering & innovation.
+                </h2>
+            </div>
 
             <p>
-                Recognition across engineering, innovation,
-                robotics and project showcasing.
+                Certificates and awards will continue to be added
+                as my academic and professional journey develops.
             </p>
 
         </div>
@@ -897,34 +1087,202 @@
 
         <div class="achievement-grid">
 
-            <div class="achievement">
-                <strong>1st</strong>
-                <span>National Conference on Robotics & IoT</span>
-                <small>2023</small>
-            </div>
 
-            <div class="achievement">
-                <strong>1st</strong>
-                <span>JSTU EEE Day Project Showcasing</span>
-                <small>2024</small>
-            </div>
+            <!-- Achievement 1 -->
 
-            <div class="achievement">
-                <strong>1st</strong>
-                <span>Innovation Showcasing Program</span>
-                <small>2024</small>
-            </div>
+            <article class="achievement-card">
 
-            <div class="achievement">
-                <strong>2nd</strong>
-                <span>Agricultural Machineries Exhibition & Talent Exploration</span>
-                <small>2024</small>
-            </div>
+                <div class="certificate-image">
 
-            <div class="achievement">
-                <strong>3rd</strong>
-                <span>Firm Mechanization Idea Competition</span>
-                <small>2025</small>
+                    <img
+                        src="assets/Certificates/National Conference on Robotics and IoT.jpg"
+                        alt="National Conference on Robotics and IoT certificate">
+
+                </div>
+
+                <div class="achievement-body">
+
+                    <span>2023 · CHAMPION</span>
+
+                    <h3>
+                        National Conference on Robotics & IoT
+                    </h3>
+
+                    <p>
+                        Recognized for innovation and technical
+                        implementation in robotics and IoT.
+                    </p>
+
+                    <a href="#projects">
+                        Related Project →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Achievement 2 -->
+
+            <article class="achievement-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="assets/Certificates/JSTU EEE Day.jpg"
+                        alt="JSTU EEE Day certificate">
+
+                </div>
+
+                <div class="achievement-body">
+
+                    <span>2024 · CHAMPION</span>
+
+                    <h3>
+                        JSTU EEE Day Project Showcasing
+                    </h3>
+
+                    <p>
+                        Recognized for engineering project
+                        development and presentation.
+                    </p>
+
+                    <a href="#projects">
+                        Related Project →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Achievement 3 -->
+
+            <article class="achievement-card">
+
+                <div class="certificate-image">
+
+                    <img
+                        src="assets/Certificates/Innovation Showcasing Program.jpg"
+                        alt="Innovation Showcasing Program certificate">
+
+                </div>
+
+                <div class="achievement-body">
+
+                    <span>2024 · 1ST POSITION</span>
+
+                    <h3>
+                        Innovation Showcasing Program
+                    </h3>
+
+                    <p>
+                        Recognized for innovative engineering
+                        development and practical problem solving.
+                    </p>
+
+                    <a href="#projects">
+                        Related Project →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="future-achievements">
+
+            <span>MORE TO COME</span>
+
+            <p>
+                Additional volunteer work, leadership,
+                training and professional certificates will
+                be added here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="section-container about-grid">
+
+        <div>
+
+            <span class="section-label">
+                08 — ABOUT
+            </span>
+
+            <h2>
+                Electrical engineer.<br>
+                Researcher.<br>
+                Builder.
+            </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="about-lead">
+
+                I am a B.Sc. Electrical & Electronic Engineering
+                graduate from Jamalpur Science & Technology
+                University, Bangladesh.
+
+            </p>
+
+            <p>
+                My academic journey has allowed me to work across
+                several connected areas — from computational
+                materials and photovoltaic device simulation to
+                machine learning, robotics, embedded systems and
+                renewable energy.
+            </p>
+
+            <p>
+                I am particularly interested in research problems
+                where computational methods and intelligent
+                engineering systems can contribute to practical
+                technological solutions.
+            </p>
+
+
+            <div class="education-box">
+
+                <span>EDUCATION</span>
+
+                <h3>
+                    B.Sc. in Electrical & Electronic Engineering
+                </h3>
+
+                <p>
+                    Jamalpur Science & Technology University
+                </p>
+
+                <div class="education-stats">
+
+                    <div>
+                        <strong>3.63 / 4.00</strong>
+                        <span>CGPA</span>
+                    </div>
+
+                    <div>
+                        <strong>3rd / 33</strong>
+                        <span>Class Rank</span>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -936,51 +1294,44 @@
 
 <!-- ================= CONTACT ================= -->
 
-<section class="contact-section"
-         id="contact">
+<section class="contact-section" id="contact">
 
     <div class="contact-container">
 
-        <div class="contact-label">
-            07 / CONTACT
-        </div>
+        <span class="section-label">
+            09 — CONTACT
+        </span>
 
         <h2>
-            Let's build something
-            <em>meaningful.</em>
+            Let's connect around<br>
+            research & ideas.
         </h2>
 
         <p>
-            I am interested in graduate research opportunities,
-            collaborations and discussions related to computational
-            materials, photovoltaics, renewable energy and intelligent
-            engineering.
+            I am interested in research collaborations,
+            graduate research opportunities, intelligent
+            engineering systems and sustainable technology.
         </p>
 
+        <a
+            href="mailto:nadirafarjanaiva@gmail.com"
+            class="email-link">
+            nadirafarjanaiva@gmail.com ↗
+        </a>
 
-        <div class="contact-links">
 
-            <a href="mailto:nadirafarjanaiva@gmail.com">
-                <span>Email</span>
-                <strong>
-                    nadirafarjanaiva@gmail.com ↗
-                </strong>
+        <div class="social-links">
+
+            <a
+                href="https://github.com/nadirafarjana"
+                target="_blank">
+                GitHub
             </a>
 
-            <a href="https://www.linkedin.com/"
-               target="_blank">
-                <span>LinkedIn</span>
-                <strong>
-                    Connect with me ↗
-                </strong>
-            </a>
-
-            <a href="https://github.com/"
-               target="_blank">
-                <span>GitHub</span>
-                <strong>
-                    Explore my code ↗
-                </strong>
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank">
+                LinkedIn
             </a>
 
         </div>
@@ -989,30 +1340,30 @@
 
 </section>
 
-</main>
-
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <div class="footer-inner">
+    <div class="footer-container">
 
-        <div>
-            <strong>Nadira Farjana<span>.</span></strong>
-            <p>
-                Electrical & Electronic Engineering Researcher
-            </p>
-        </div>
+        <span>
+            © 2026 Nadira Farjana
+        </span>
 
-        <div class="footer-right">
-            <span>© 2026 Nadira Farjana</span>
-            <span>Built with curiosity & code.</span>
-        </div>
+        <span>
+            Electrical & Electronic Engineering
+        </span>
+
+        <a href="#home">
+            Back to top ↑
+        </a>
 
     </div>
 
 </footer>
+
+</main>
 
 
 <script src="script.js"></script>
