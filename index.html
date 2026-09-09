@@ -2,176 +2,1102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nadira Farjana | EEE Researcher</title>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --muted-text: #666666;
-            --accent-color: #0070f3;
-            --border-color: #eaeaea;
-            --sidebar-width: 280px;
-        }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text-color); background-color: var(--bg-color); display: flex; min-height: 100vh; line-height: 1.6; }
+    <meta name="description"
+          content="Nadira Farjana — Electrical and Electronic Engineering researcher working in computational materials science, photovoltaics, DFT, and machine learning.">
 
-        /* Sidebar Styling */
-        .sidebar { width: var(--sidebar-width); background: #fafafa; border-right: 1px solid var(--border-color); padding: 40px 30px; position: fixed; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
-        .profile-info h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; letter-spacing: -0.5px; }
-        .profile-title { font-size: 0.9rem; color: var(--muted-text); margin-bottom: 25px; }
-        
-        .nav-links { list-style: none; margin-bottom: 40px; }
-        .nav-links li { margin: 12px 0; }
-        .nav-links a { text-decoration: none; color: var(--text-color); font-size: 0.95rem; font-weight: 500; }
-        .nav-links a:hover { color: var(--accent-color); }
+    <meta name="author" content="Nadira Farjana">
 
-        .cv-btn { display: inline-block; border: 1px solid var(--text-color); color: var(--text-color); padding: 8px 16px; text-decoration: none; border-radius: 4px; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; text-align: center; }
-        .cv-btn:hover { background: var(--text-color); color: white; }
+    <title>Nadira Farjana | Researcher</title>
 
-        .contact-footer { font-size: 0.8rem; color: var(--muted-text); }
-        .contact-footer a { color: var(--muted-text); text-decoration: none; display: block; margin-top: 4px; }
-        .contact-footer a:hover { color: var(--accent-color); }
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Main Content Container */
-        .main-content { margin-left: var(--sidebar-width); padding: 60px 80px; max-width: 900px; width: 100%; }
-        section { margin-bottom: 50px; scroll-margin-top: 60px; }
-        h2 { font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-color); margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
-        p { margin-bottom: 15px; font-size: 1rem; color: #333; }
-
-        /* Research Interests Grid */
-        .interest-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style: none; }
-        .interest-list li { background: #fdfdfd; border: 1px solid var(--border-color); padding: 12px 16px; border-radius: 6px; font-size: 0.95rem; font-weight: 500; }
-
-        /* Timelines & Items */
-        .item { margin-bottom: 25px; }
-        .item-header { display: flex; justify-content: space-between; align-items: baseline; }
-        .item-title { font-weight: 600; font-size: 1.05rem; }
-        .item-date { font-size: 0.85rem; color: var(--muted-text); }
-        .item-sub { font-size: 0.95rem; color: var(--muted-text); margin-bottom: 6px; }
-        ul.bullets { padding-left: 20px; list-style-type: square; font-size: 0.95rem; color: #444; }
-        ul.bullets li { margin-bottom: 5px; }
-
-        /* Publication Cards */
-        .pub-item { margin-bottom: 20px; font-size: 0.95rem; }
-        .pub-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; background: #eee; padding: 2px 6px; border-radius: 3px; margin-bottom: 5px; }
-        .tag-published { background: #e6f4ea; color: #137333; }
-        .tag-submitted { background: #fef7e0; color: #b06000; }
-
-        /* Responsive UI */
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            .sidebar { position: relative; width: 100%; height: auto; padding: 30px 20px; border-right: none; border-bottom: 1px solid var(--border-color); }
-            .main-content { margin-left: 0; padding: 40px 20px; }
-            .interest-list { grid-template-columns: 1fr; }
-        }
-    </style>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- Left Sidebar layout matching modern minimal design -->
-    <aside class="sidebar">
-        <div class="top-nav">
-            <div class="profile-info">
-                <h1>Nadira Farjana</h1>
-                <div class="profile-title">Electrical & Electronic Engineering Researcher</div>
-            </div>
-            
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<header class="site-header">
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Nadira<span>.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#interests">Research Interests</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="research.html">
+                        Research
+                    </a>
+                </li>
+
+                <li>
+                    <a href="publications.html">
+                        Publications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="awards.html">
+                        Achievements
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cv.html">
+                        CV
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
 
-            <!-- Button linking directly to your exact PDF filename -->
-            <a href="Nadira Farjana.pdf" class="cv-btn" download>↓ Download CV (PDF)</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<main>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <!-- Hero introduction -->
+
+            <div class="fade-up">
+
+                <div class="eyebrow">
+                    Electrical & Electronic Engineering Researcher
+                </div>
+
+                <h1>
+                    Computational
+                    <span>Materials &</span>
+                    Renewable Energy
+                </h1>
+
+                <p class="hero-description">
+                    I work at the intersection of computational materials science,
+                    photovoltaic technologies, and intelligent engineering systems,
+                    with a focus on DFT, perovskite solar cells, and machine
+                    learning-assisted research.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="research.html"
+                       class="btn btn-primary">
+                        Explore Research
+                    </a>
+
+                    <a href="cv.html"
+                       class="btn btn-outline">
+                        View CV
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Academic information -->
+
+            <div class="hero-meta fade-up">
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Education
+                    </span>
+
+                    <div class="meta-value">
+                        BSc in Electrical & Electronic Engineering
+                    </div>
+
+                </div>
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Institution
+                    </span>
+
+                    <div class="meta-value">
+                        Jamalpur Science & Technology University
+                    </div>
+
+                </div>
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Academic Standing
+                    </span>
+
+                    <div class="meta-value">
+                        CGPA 3.63 / 4.00 · Rank 3rd / 33
+                    </div>
+
+                </div>
+
+
+                <div class="meta-item">
+
+                    <span class="meta-label">
+                        Research Focus
+                    </span>
+
+                    <div class="meta-value">
+                        DFT · Photovoltaics · AI
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="contact-footer">
-            <p style="font-size: 0.8rem; margin: 0;">nadirafarjanaiva@gmail.com</p>
-            <a href="https://linkedin.com" target="_blank">LinkedIn ↗</a>
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESEARCH FOCUS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                01 / FOCUS
+            </div>
+
+            <div>
+
+                <h2 class="section-title">
+                    Research directions shaped by computation, materials, and energy.
+                </h2>
+
+                <p class="section-intro">
+                    My research interests combine first-principles calculations,
+                    photovoltaic device simulation, and machine learning to
+                    investigate materials and technologies for sustainable energy
+                    and intelligent engineering.
+                </p>
+
+            </div>
+
         </div>
-    </aside>
 
-    <!-- Right Column Main Body content containing exact CV values -->
-    <main class="main-content">
-        
-        <section id="about">
-            <h2>01 About Me</h2>
-            <p>I am an Electrical and Electronic Engineering graduate from Jamalpur Science & Technology University. My work focuses closely on computational materials science and device-level modeling, combining first-principles computations to explore high-efficiency energy materials.</p>
-            <p>I operate at the intersection of Density Functional Theory (DFT), renewable energy designs, and machine learning structures to model future optoelectronic systems.</p>
-        </section>
 
-        <section id="interests">
-            <h2>02 Research Interests</h2>
-            <ul class="interest-list">
-                <li>Computational Materials Science</li>
-                <li>Density Functional Theory (DFT)</li>
-                <li>Lead-Free Halide Materials</li>
-                <li>Machine Learning Materials Modeling</li>
-                <li>Optoelectronic & Photovoltaic Systems</li>
-                <li>Perovskite Solar Cell Fabrication</li>
-            </ul>
-        </section>
+        <div class="research-grid">
 
-        <section id="publications">
-            <h2>03 Publications & Manuscripts</h2>
-            
-            <div class="pub-item">
-                <span class="pub-tag tag-published">Published Journal Article</span>
-                <p>Khan, R., <strong>Farjana, N.</strong>, Jim, M. J. A., Al-Humaidi, J. Y., Islam, M. R., & Rana, M. M. (2025). Numerical simulation and performance enhancement of CsBi3I10-based heterojunction solar cell with various semiconductor layers along with machine learning-based analysis. <em>Solar Energy</em>, 295, 113539. DOI: 10.1016/j.solener.2025.113539</p>
+
+            <!-- Research area 01 -->
+
+            <article class="research-card">
+
+                <span class="card-number">
+                    01
+                </span>
+
+                <h3>
+                    Computational Materials
+                </h3>
+
+                <p>
+                    First-principles investigation of structural, electronic,
+                    optical, mechanical, thermal, and phonon properties of
+                    emerging materials.
+                </p>
+
+            </article>
+
+
+            <!-- Research area 02 -->
+
+            <article class="research-card">
+
+                <span class="card-number">
+                    02
+                </span>
+
+                <h3>
+                    Photovoltaic Materials
+                </h3>
+
+                <p>
+                    Perovskite solar cells, semiconductor heterojunctions,
+                    charge transport layers, and SCAPS-1D based photovoltaic
+                    device optimization.
+                </p>
+
+            </article>
+
+
+            <!-- Research area 03 -->
+
+            <article class="research-card">
+
+                <span class="card-number">
+                    03
+                </span>
+
+                <h3>
+                    AI & Intelligent Systems
+                </h3>
+
+                <p>
+                    Machine learning, deep learning, computer vision, and
+                    embedded systems for engineering and assistive applications.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURED RESEARCH
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                02 / FEATURED
             </div>
 
-            <div class="pub-item">
-                <span class="pub-tag tag-submitted">Submitted Manuscript</span>
-                <p><strong>Farjana, N.</strong>, et al. "Device modeling and performance analysis of CsGeI3Br-based single junction and CsGeI3Br/GaAs-based heterojunction perovskite solar cell with appropriate charge transport layers." (Journal Article - <em>Luminescence</em>, Co-Author)</p>
+            <div>
+
+                <h2 class="section-title">
+                    Current research
+                </h2>
+
             </div>
 
-            <div class="pub-item">
-                <span class="pub-tag tag-submitted">Submitted Manuscript</span>
-                <p><strong>Farjana, N.</strong>, et al. "Computational Analysis, Performance Enhancement and Comparison of Cs2SnBr6, ZnSnN2, Cs2SnBr6/ZnSnN2-based Perovskite Solar Cells" (iCONNECT 2026, 1st Author)</p>
-            </div>
-        </section>
+        </div>
 
-        <section id="experience">
-            <h2>04 Research Experience</h2>
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Undergraduate Researcher</span>
-                    <span class="item-date">2024 - Present</span>
+
+        <div class="featured-research">
+
+            <div>
+
+                <span class="featured-label">
+                    Undergraduate Thesis
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    First-Principles Investigation of
+                    Composition-Driven Properties in
+                    Mixed-Halide Mg₃PCl₃₋ₓBrₓ Materials
+                </h3>
+
+                <p>
+                    A computational investigation of the composition-dependent
+                    structural, electronic, optical, mechanical, thermal, and
+                    phonon properties of Mg₃PCl₃₋ₓBrₓ materials for x = 0, 1,
+                    2, and 3 using first-principles calculations.
+                </p>
+
+
+                <div class="research-details">
+
+                    <span class="tag">
+                        DFT
+                    </span>
+
+                    <span class="tag">
+                        Quantum ESPRESSO
+                    </span>
+
+                    <span class="tag">
+                        Electronic Structure
+                    </span>
+
+                    <span class="tag">
+                        Optical Properties
+                    </span>
+
+                    <span class="tag">
+                        Phonons
+                    </span>
+
+                    <span class="tag">
+                        ~80% Completed
+                    </span>
+
                 </div>
-                <div class="item-sub">Jamalpur Science & Technology University</div>
-                <ul class="bullets">
-                    <li>Conducting first-principles Density Functional Theory (DFT) simulations using Quantum ESPRESSO.</li>
-                    <li>Investigating structural, electronic, optical, mechanical, thermal, and phonon properties of semiconductors.</li>
-                    <li>Performing computational structural optimization using SCAPS-1D.</li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="education">
-            <h2>05 Education</h2>
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">BSc. in Electrical and Electronic Engineering</span>
-                    <span class="item-date">Graduated</span>
-                </div>
-                <div class="item-sub">Jamalpur Science & Technology University</div>
-                <p style="font-size: 0.9rem; color: var(--muted-text);">CGPA: 3.63 / 4.00 (Class Rank: 3rd out of 33 students)</p>
             </div>
-            <div class="item">
-                <div class="item-header">
-                    <span class="item-title">Higher Secondary Certificate (H.S.C)</span>
-                    <span class="item-date">2020</span>
-                </div>
-                <div class="item-sub">Shahid Syed Nazrul Islam College, Mymensingh | GPA: 5.0 / 5.0</div>
-            </div>
-        </section>
 
-        <section id="skills">
-            <h2>06 Technical Skills</h2>
-            <div class="item">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PUBLICATIONS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                03 / PUBLICATIONS
+            </div>
+
+            <div>
+
+                <h2 class="section-title">
+                    Selected research output
+                </h2>
+
+                <p class="section-intro">
+                    My research work spans photovoltaic device simulation,
+                    computational materials, and machine learning-assisted
+                    engineering analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="publication-list">
+
+
+            <!-- Publication 01 -->
+
+            <article class="publication">
+
+                <div class="publication-year">
+                    2025
+                </div>
+
+                <div>
+
+                    <h3>
+                        Numerical simulation and performance enhancement of
+                        CsBi₃I₁₀-based heterojunction solar cell with various
+                        semiconductor layers along with machine learning-based
+                        analysis
+                    </h3>
+
+                    <p>
+                        <strong>Solar Energy</strong> · Volume 295 · 113539
+                    </p>
+
+                    <p>
+                        DOI: 10.1016/j.solener.2025.113539
+                    </p>
+
+                </div>
+
+                <div class="publication-status">
+                    PUBLISHED
+                </div>
+
+            </article>
+
+
+            <!-- Publication 02 -->
+
+            <article class="publication">
+
+                <div class="publication-year">
+                    2026
+                </div>
+
+                <div>
+
+                    <h3>
+                        Device modeling and performance analysis of
+                        CsGeI₂Br-based single junction and
+                        CsGeI₂Br/GaAs-based heterojunction perovskite solar
+                        cells
+                    </h3>
+
+                    <p>
+                        Luminescence
+                    </p>
+
+                </div>
+
+                <div class="publication-status">
+                    SUBMITTED
+                </div>
+
+            </article>
+
+
+            <!-- Publication 03 -->
+
+            <article class="publication">
+
+                <div class="publication-year">
+                    2026
+                </div>
+
+                <div>
+
+                    <h3>
+                        Computational Analysis, Performance Enhancement and
+                        Comparison of Cs₂SnBr₆, ZnSnN₂, and
+                        Cs₂SnBr₆/ZnSnN₂-based Perovskite Solar Cells
+                    </h3>
+
+                    <p>
+                        iCONNECT 2026
+                    </p>
+
+                </div>
+
+                <div class="publication-status">
+                    SUBMITTED
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="hero-actions">
+
+            <a href="publications.html"
+               class="btn btn-outline">
+
+                View All Publications →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENGINEERING PROJECTS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                04 / ENGINEERING
+            </div>
+
+            <div>
+
+                <h2 class="section-title">
+                    From computational research to working systems.
+                </h2>
+
+                <p class="section-intro">
+                    Alongside research, I have developed hardware and intelligent
+                    engineering systems involving embedded platforms, IoT,
+                    automation, computer vision, and renewable energy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- Featured project -->
+
+            <article class="project-card featured">
+
+                <div class="project-category">
+                    Featured Engineering Project
+                </div>
+
+                <h3>
+                    Self-Driving Assistive Vehicle for
+                    Visually Impaired Individuals
+                </h3>
+
+                <p>
+                    An autonomous assistive system integrating navigation,
+                    computer vision, deep-learning based currency recognition,
+                    barcode reading, and real-time GPS tracking.
+                </p>
+
+                <div class="research-details">
+
+                    <span class="tag">
+                        Raspberry Pi
+                    </span>
+
+                    <span class="tag">
+                        Computer Vision
+                    </span>
+
+                    <span class="tag">
+                        Deep Learning
+                    </span>
+
+                    <span class="tag">
+                        GPS
+                    </span>
+
+                    <span class="tag">
+                        Python
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Project -->
+
+            <article class="project-card">
+
+                <div class="project-category">
+                    Renewable Energy
+                </div>
+
+                <h3>
+                    Off-Grid Solar System
+                </h3>
+
+                <p>
+                    Design, setup, and analysis of an off-grid solar energy
+                    system for practical renewable-energy applications.
+                </p>
+
+            </article>
+
+
+            <!-- Project -->
+
+            <article class="project-card">
+
+                <div class="project-category">
+                    IoT & Environment
+                </div>
+
+                <h3>
+                    IoT Environment Monitoring System
+                </h3>
+
+                <p>
+                    ESP32-based environmental monitoring using methane,
+                    temperature, humidity, Bluetooth, and cloud connectivity.
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="hero-actions">
+
+            <a href="projects.html"
+               class="btn btn-outline">
+
+                Explore All Projects →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESEARCH JOURNEY
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                05 / JOURNEY
+            </div>
+
+            <div>
+
+                <h2 class="section-title">
+                    A growing research journey.
+                </h2>
+
+                <p class="section-intro">
+                    From hands-on engineering projects to computational
+                    materials research and peer-reviewed publication.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2023
+                </div>
+
+                <div>
+
+                    <h3>
+                        Engineering & Intelligent Systems
+                    </h3>
+
+                    <p>
+                        Began developing embedded systems, robotics, automation,
+                        and assistive engineering projects.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2024
+                </div>
+
+                <div>
+
+                    <h3>
+                        Renewable Energy & Research
+                    </h3>
+
+                    <p>
+                        Developed renewable-energy projects and began
+                        computational research involving photovoltaic devices
+                        and solar-cell simulation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2025
+                </div>
+
+                <div>
+
+                    <h3>
+                        First Journal Publication
+                    </h3>
+
+                    <p>
+                        Research on CsBi₃I₁₀-based heterojunction solar cells
+                        was published in <em>Solar Energy</em>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2026
+                </div>
+
+                <div>
+
+                    <h3>
+                        Computational Materials Research
+                    </h3>
+
+                    <p>
+                        Advanced first-principles research on mixed-halide
+                        materials while expanding research into machine
+                        learning and intelligent engineering systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACHIEVEMENTS
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="section-number">
+                06 / ACHIEVEMENTS
+            </div>
+
+            <div>
+
+                <h2 class="section-title">
+                    Recognition for engineering and innovation.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="awards-list">
+
+
+            <div class="award">
+
+                <div class="award-year">
+                    2025
+                </div>
+
+                <h3>
+                    Third Position — Firm Mechanization Idea Competition
+                </h3>
+
+                <div class="award-place">
+                    3rd
+                </div>
+
+            </div>
+
+
+            <div class="award">
+
+                <div class="award-year">
+                    2024
+                </div>
+
+                <h3>
+                    Second Position — Agricultural Machineries Exhibition
+                    & Talent Exploration Idea Contest
+                </h3>
+
+                <div class="award-place">
+                    2nd
+                </div>
+
+            </div>
+
+
+            <div class="award">
+
+                <div class="award-year">
+                    2024
+                </div>
+
+                <h3>
+                    Champion — JSTU EEE Day Project Showcasing
+                </h3>
+
+                <div class="award-place">
+                    1st
+                </div>
+
+            </div>
+
+
+            <div class="award">
+
+                <div class="award-year">
+                    2024
+                </div>
+
+                <h3>
+                    First Position — Innovation Showcasing Program
+                </h3>
+
+                <div class="award-place">
+                    1st
+                </div>
+
+            </div>
+
+
+            <div class="award">
+
+                <div class="award-year">
+                    2023
+                </div>
+
+                <h3>
+                    Champion — National Conference on Robotics and IoT
+                </h3>
+
+                <div class="award-place">
+                    1st
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="hero-actions">
+
+            <a href="awards.html"
+               class="btn btn-outline">
+
+                View All Achievements →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT CTA
+     ===================================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="contact-intro">
+
+                <div class="label">
+                    07 / CONTACT
+                </div>
+
+                <h2>
+                    Let's connect through research.
+                </h2>
+
+                <p>
+                    I am interested in research opportunities, graduate study,
+                    collaborations, and discussions related to computational
+                    materials, photovoltaics, and intelligent engineering.
+                </p>
+
+            </div>
+
+
+            <div class="contact-links">
+
+                <a href="mailto:nadirafarjanaiva@gmail.com"
+                   class="contact-link">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/n-farjana/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-link">
+
+                    <span>
+                        LinkedIn
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <a href="contact.html"
+                   class="contact-link">
+
+                    <span>
+                        Academic Profiles
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-name">
+                    Nadira Farjana
+                </div>
+
+                <div class="footer-text">
+                    Electrical & Electronic Engineering Researcher
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="research.html">
+                    Research
+                </a>
+
+                <a href="publications.html">
+                    Publications
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
