@@ -2099,84 +2099,30 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* -------------------------------
-   REVEAL ANIMATION
--------------------------------- */
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
 
-const revealElements = document.querySelectorAll(
-    ".research-card, .project-card, .publication, .achievement-card, .featured-project, .highlight-card"
-);
+.reveal {
 
+    opacity: 0;
 
-const observer = new IntersectionObserver(
+    transform: translateY(25px);
 
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.08
-    }
-
-);
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
 
 
-revealElements.forEach(element => {
+.reveal.visible {
 
-    element.classList.add("reveal");
+    opacity: 1;
 
-    observer.observe(element);
-
-});
-
-
-/* -------------------------------
-   ACTIVE NAVIGATION
--------------------------------- */
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("nav a[href^='#']");
+    transform: translateY(0);
+}
 
 
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 150;
-
-        if (window.scrollY >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
+nav a.active {
+    color: var(--ink);
+}
