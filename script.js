@@ -1,30 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.querySelector(".sidebar");
     const menuButton = document.querySelector(".menu-button");
-    const mobileMenu = document.querySelector(".mobile-menu");
 
-    if (menuButton && mobileMenu) {
-        menuButton.addEventListener("click", function () {
-            mobileMenu.classList.toggle("open");
+    if (menuButton && sidebar) {
+        menuButton.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
 
-            if (mobileMenu.classList.contains("open")) {
-                menuButton.textContent = "CLOSE";
-            } else {
+            const isOpen = sidebar.classList.contains("open");
+            menuButton.setAttribute("aria-expanded", isOpen);
+            menuButton.textContent = isOpen ? "CLOSE" : "MENU";
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                sidebar.classList.remove("open");
                 menuButton.textContent = "MENU";
-            }
+                menuButton.setAttribute("aria-expanded", "false");
+            });
         });
     }
 
-    // Highlight current page in desktop navigation
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".sidebar-nav a").forEach(function (link) {
+    document.querySelectorAll(".sidebar-nav a").forEach(link => {
         const href = link.getAttribute("href");
 
         if (href === currentPage) {
             link.classList.add("active");
         }
     });
-
 });
