@@ -1,14 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Highlight the current page in the navigation
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
 
-    document.querySelectorAll(".nav a").forEach(link => {
-        const linkPage = link.getAttribute("href");
+    document.querySelectorAll(".navigation a").forEach(link => {
 
-        if (linkPage === currentPage) {
+        const page = link.getAttribute("href");
+
+        if (page === currentPage) {
             link.classList.add("active");
         }
+
     });
 
 });
