@@ -4,135 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nadira Farjana — EEE Researcher</title>
+    <title>Nadira Farjana — Researcher</title>
 
     <meta
         name="description"
-        content="Nadira Farjana — Electrical & Electronic Engineering researcher working across computational materials, photovoltaics, artificial intelligence, robotics and renewable energy."
+        content="Nadira Farjana — Electrical and Electronic Engineering researcher working in computational materials, photovoltaics, artificial intelligence, robotics and renewable energy."
     >
-
-    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
         rel="stylesheet"
     >
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+<!-- ======================================================
+     HEADER
+====================================================== -->
 
-<header class="site-header">
+<header class="header">
 
-    <div class="header-inner">
+    <a href="#home" class="site-name">
+        Nadira Farjana
+    </a>
 
-        <a href="#top" class="wordmark">
-            NF
-        </a>
+    <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Nadira Farjana.pdf" target="_blank">CV ↗</a>
+    </nav>
 
-        <nav class="desktop-nav">
-
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#work">Work</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-
-            <a
-                href="assets/Nadira Farjana.pdf"
-                target="_blank"
-                class="cv-link"
-            >
-                CV ↗
-            </a>
-
-        </nav>
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open navigation"
-        >
-            MENU
-        </button>
-
-    </div>
+    <button class="menu-toggle" id="menuToggle">
+        MENU
+    </button>
 
 </header>
 
 
-<!-- =========================================================
+<!-- ======================================================
      MOBILE MENU
-========================================================= -->
+====================================================== -->
 
 <div class="mobile-menu" id="mobileMenu">
 
-    <button class="close-menu" id="closeMenu">
+    <button class="menu-close" id="menuClose">
         CLOSE
     </button>
 
     <nav>
-
-        <a href="#about">01 — About</a>
-        <a href="#research">02 — Research</a>
-        <a href="#work">03 — Selected Work</a>
-        <a href="#publications">04 — Publications</a>
-        <a href="#news">05 — News & Achievements</a>
-        <a href="#contact">06 — Contact</a>
-
-        <a
-            href="assets/Nadira Farjana.pdf"
-            target="_blank"
-        >
-            Download CV ↗
-        </a>
-
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
     </nav>
 
 </div>
 
 
-<main id="top">
+<main id="home">
 
+<!-- ======================================================
+     INTRO
+====================================================== -->
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+<section class="intro">
 
-<section class="hero">
+    <div class="intro-meta">
 
-    <div class="hero-top">
+        <span>
+            Electrical & Electronic Engineering
+        </span>
 
-        <p class="hero-kicker">
-            ELECTRICAL & ELECTRONIC ENGINEERING
-        </p>
-
-        <p class="hero-location">
-            Bangladesh · Researcher
-        </p>
+        <span>
+            Bangladesh
+        </span>
 
     </div>
 
 
-    <div class="hero-title">
+    <div class="intro-name">
 
         <h1>
             Nadira
-            <em>Farjana</em>
+        </h1>
+
+        <h1 class="name-second">
+            Farjana
         </h1>
 
     </div>
 
 
-    <div class="hero-bottom">
+    <div class="intro-bottom">
 
-        <div class="hero-image">
+        <div class="portrait">
 
             <img
                 src="assets/profile.jpg"
@@ -142,29 +120,27 @@
         </div>
 
 
-        <div class="hero-intro">
+        <div class="intro-statement">
 
             <p>
-                I am an Electrical & Electronic Engineering researcher
-                interested in the intersection of
-                <strong>computational materials, photovoltaics,
-                artificial intelligence and intelligent engineering
-                systems.</strong>
+                I am an Electrical & Electronic Engineering
+                researcher working across
+                <em>computational materials, photovoltaics,
+                artificial intelligence and intelligent
+                engineering systems.</em>
             </p>
 
-            <div class="hero-links">
+            <div class="intro-links">
 
                 <a href="#research">
-                    Explore research
-                    <span>↓</span>
+                    Research ↓
                 </a>
 
                 <a
                     href="assets/Nadira Farjana.pdf"
                     target="_blank"
                 >
-                    Curriculum vitae
-                    <span>↗</span>
+                    Curriculum Vitae ↗
                 </a>
 
             </div>
@@ -176,54 +152,56 @@
 </section>
 
 
-<!-- =========================================================
-     ABOUT
-========================================================= -->
+<!-- ======================================================
+     PERSONAL INFO
+====================================================== -->
 
-<section class="editorial-section" id="about">
+<section class="section personal" id="about">
 
-    <div class="section-marker">
+    <div class="section-label">
         <span>01</span>
-        ABOUT
+        Personal Info
     </div>
 
 
-    <div class="section-content about-content">
+    <div class="section-main">
 
-        <div class="about-main">
+        <div class="personal-copy">
 
             <h2>
-                Engineering ideas
-                <span>into useful systems.</span>
+                Engineering,
+                <br>
+                research &
+                <br>
+                <em>curiosity.</em>
             </h2>
 
-            <p class="lead">
-                My work moves between computational research and
-                physical engineering. I am particularly interested
+            <p class="large-copy">
+                My work sits at the intersection of computational
+                research and practical engineering. I am interested
                 in understanding emerging semiconductor materials,
-                improving photovoltaic devices, and building
-                intelligent systems that address practical problems.
+                improving photovoltaic devices and developing
+                intelligent systems for real-world applications.
             </p>
 
             <p>
-                My research and engineering experience includes
-                density functional theory, Quantum ESPRESSO,
-                SCAPS-1D, machine learning, computer vision,
-                embedded systems, robotics, IoT and renewable-energy
-                technologies.
+                My technical interests include density functional
+                theory, Quantum ESPRESSO, SCAPS-1D, machine learning,
+                computer vision, robotics, embedded systems, IoT
+                and renewable-energy technologies.
             </p>
 
         </div>
 
 
-        <aside class="about-side">
+        <div class="personal-details">
 
-            <div class="info-item">
+            <div class="detail">
 
                 <span>Education</span>
 
                 <strong>
-                    B.Sc. in Electrical &<br>
+                    B.Sc. in Electrical &
                     Electronic Engineering
                 </strong>
 
@@ -234,7 +212,7 @@
             </div>
 
 
-            <div class="info-item">
+            <div class="detail">
 
                 <span>Academic standing</span>
 
@@ -249,80 +227,90 @@
             </div>
 
 
-            <div class="info-item">
+            <div class="detail">
 
-                <span>Based in</span>
+                <span>Research areas</span>
 
                 <strong>
-                    Bangladesh
+                    Materials · Energy · AI
                 </strong>
 
             </div>
 
-        </aside>
+
+            <div class="detail">
+
+                <span>Email</span>
+
+                <a href="mailto:nadirafarjanaiva@gmail.com">
+                    nadirafarjanaiva@gmail.com
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- ======================================================
      RESEARCH
-========================================================= -->
+====================================================== -->
 
-<section class="editorial-section research-section" id="research">
+<section class="section research" id="research">
 
-    <div class="section-marker">
+    <div class="section-label">
         <span>02</span>
-        RESEARCH
+        Research Interests
     </div>
 
 
-    <div class="section-content">
+    <div class="section-main">
 
-        <div class="section-introduction">
+        <div class="research-intro">
 
             <h2>
-                Research
-                <span>interests.</span>
+                What I
+                <em>work on.</em>
             </h2>
 
             <p>
-                Three areas currently shape my research direction.
+                My research interests span computational materials,
+                photovoltaic devices and intelligent engineering
+                systems.
             </p>
 
         </div>
 
 
-        <div class="research-list">
+        <div class="research-items">
 
+            <article class="research-item">
 
-            <article class="research-row">
-
-                <div class="research-number">
+                <div class="research-index">
                     01
                 </div>
 
-                <div class="research-name">
-                    Computational Materials
-                    <br>
-                    & Photovoltaics
-                </div>
+                <div>
 
-                <div class="research-description">
+                    <h3>
+                        Computational Materials
+                        <br>
+                        & Photovoltaics
+                    </h3>
 
                     <p>
-                        First-principles investigation of emerging
-                        semiconductor materials and photovoltaic
-                        devices, from electronic structure to
-                        device-level performance.
+                        First-principles investigation of electronic,
+                        structural, optical and mechanical properties
+                        of emerging materials, together with
+                        photovoltaic device simulation and optimization.
                     </p>
 
-                    <div class="research-tags">
-                        <span>DFT</span>
-                        <span>Quantum ESPRESSO</span>
-                        <span>SCAPS-1D</span>
-                        <span>Perovskites</span>
+                    <div class="keywords">
+                        DFT · Quantum ESPRESSO · SCAPS-1D ·
+                        Perovskites · Semiconductor Devices
                     </div>
 
                 </div>
@@ -330,32 +318,29 @@
             </article>
 
 
-            <article class="research-row">
+            <article class="research-item">
 
-                <div class="research-number">
+                <div class="research-index">
                     02
                 </div>
 
-                <div class="research-name">
-                    Artificial Intelligence
-                    <br>
-                    & Robotics
-                </div>
+                <div>
 
-                <div class="research-description">
+                    <h3>
+                        Artificial Intelligence
+                        <br>
+                        & Robotics
+                    </h3>
 
                     <p>
-                        Intelligent systems combining computer vision,
-                        deep learning, autonomous navigation and
-                        embedded computing for real-world applications.
+                        Machine learning, computer vision, autonomous
+                        navigation and embedded intelligence for
+                        assistive and practical engineering systems.
                     </p>
 
-                    <div class="research-tags">
-                        <span>Computer Vision</span>
-                        <span>YOLO</span>
-                        <span>Deep Learning</span>
-                        <span>Robotics</span>
-                        <span>Raspberry Pi</span>
+                    <div class="keywords">
+                        YOLO · Deep Learning · Computer Vision ·
+                        Robotics · Raspberry Pi
                     </div>
 
                 </div>
@@ -363,31 +348,29 @@
             </article>
 
 
-            <article class="research-row">
+            <article class="research-item">
 
-                <div class="research-number">
+                <div class="research-index">
                     03
                 </div>
 
-                <div class="research-name">
-                    Renewable Energy
-                    <br>
-                    & Sustainable Systems
-                </div>
+                <div>
 
-                <div class="research-description">
+                    <h3>
+                        Renewable Energy
+                        <br>
+                        & Sustainable Systems
+                    </h3>
 
                     <p>
-                        Sustainable engineering solutions involving
-                        solar energy, intelligent monitoring,
-                        environmental sensing and energy systems.
+                        Solar-energy systems, intelligent monitoring,
+                        environmental sensing and sustainable
+                        engineering solutions.
                     </p>
 
-                    <div class="research-tags">
-                        <span>Solar Energy</span>
-                        <span>IoT</span>
-                        <span>Energy Systems</span>
-                        <span>Monitoring</span>
+                    <div class="keywords">
+                        Solar PV · IoT · Energy Systems ·
+                        Monitoring · Sustainability
                     </div>
 
                 </div>
@@ -401,284 +384,93 @@
 </section>
 
 
-<!-- =========================================================
-     SELECTED WORK
-========================================================= -->
+<!-- ======================================================
+     NEWS
+====================================================== -->
 
-<section class="editorial-section work-section" id="work">
+<section class="section news" id="news">
 
-    <div class="section-marker">
+    <div class="section-label">
         <span>03</span>
-        SELECTED WORK
+        News
     </div>
 
 
-    <div class="section-content">
+    <div class="section-main">
 
-        <div class="section-introduction">
+        <div class="news-heading">
 
             <h2>
-                Selected
-                <span>work.</span>
+                Recent
+                <em>updates.</em>
             </h2>
-
-            <p>
-                Research projects and engineering systems that
-                represent the range of my technical interests.
-            </p>
 
         </div>
 
 
-        <!-- PROJECT 01 -->
+        <div class="news-list">
 
-        <article class="work-feature">
+            <article class="news-row">
 
-            <div class="work-image">
-
-                <img
-                    src="assets/Projects/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-Learning/Autonomous car on customise track.png"
-                    alt="Autonomous assistive vehicle"
-                >
-
-            </div>
-
-
-            <div class="work-details">
-
-                <div class="work-index">
-                    01 / AI · ROBOTICS
-                </div>
-
-                <h3>
-                    An Integrated Assistive System
-                    for Visually Impaired Individuals
-                </h3>
+                <time>2026</time>
 
                 <p>
-                    An integrated assistive platform combining
-                    autonomous navigation, deep-learning-based
-                    object detection, currency recognition,
-                    GPS tracking and safety functions.
+                    Continued research on computational photovoltaic
+                    devices, including CsGeI₂Br-based single-junction
+                    and heterojunction solar cells.
                 </p>
 
-                <div class="work-meta">
-
-                    <span>
-                        Computer Vision
-                    </span>
-
-                    <span>
-                        Deep Learning
-                    </span>
-
-                    <span>
-                        Autonomous Navigation
-                    </span>
-
-                    <span>
-                        Embedded Systems
-                    </span>
-
-                </div>
+            </article>
 
 
-                <a
-                    href="https://github.com/nadirafarjana/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-Learning"
-                    target="_blank"
-                    class="arrow-link"
-                >
-                    View project
-                    <span>↗</span>
-                </a>
+            <article class="news-row">
 
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 02 -->
-
-        <article class="work-feature reverse">
-
-            <div class="work-image">
-
-                <img
-                    src="assets/Publications/Workflow Published work CsBi3I10.png"
-                    alt="CsBi3I10 photovoltaic research workflow"
-                >
-
-            </div>
-
-
-            <div class="work-details">
-
-                <div class="work-index">
-                    02 / PHOTOVOLTAICS
-                </div>
-
-                <h3>
-                    CsBi₃I₁₀
-                    Photovoltaic Device Modeling
-                </h3>
+                <time>2026</time>
 
                 <p>
-                    Numerical investigation and performance
-                    enhancement of CsBi₃I₁₀-based heterojunction
-                    solar cells using semiconductor transport
-                    layers and machine-learning-based analysis.
+                    Presented research comparing Cs₂SnBr₆,
+                    ZnSnN₂ and Cs₂SnBr₆/ZnSnN₂-based photovoltaic
+                    device structures.
                 </p>
 
-                <div class="work-meta">
-
-                    <span>
-                        SCAPS-1D
-                    </span>
-
-                    <span>
-                        Perovskite Solar Cells
-                    </span>
-
-                    <span>
-                        Machine Learning
-                    </span>
-
-                </div>
+            </article>
 
 
-                <a
-                    href="https://doi.org/10.1016/j.solener.2025.113539"
-                    target="_blank"
-                    class="arrow-link"
-                >
-                    Read publication
-                    <span>↗</span>
-                </a>
+            <article class="news-row">
 
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 03 -->
-
-        <article class="work-feature">
-
-            <div class="work-image">
-
-                <img
-                    src="assets/Projects/Design, Set up and Analysis of Off-Grid Solar System/RERC.jpeg"
-                    alt="Off-grid solar energy system"
-                >
-
-            </div>
-
-
-            <div class="work-details">
-
-                <div class="work-index">
-                    03 / RENEWABLE ENERGY
-                </div>
-
-                <h3>
-                    Off-Grid Solar
-                    Energy System
-                </h3>
+                <time>2025</time>
 
                 <p>
-                    Design, implementation and analysis of an
-                    off-grid photovoltaic system developed as
-                    a practical renewable-energy engineering project.
+                    Research on CsBi₃I₁₀-based heterojunction
+                    solar cells was published in
+                    <em>Solar Energy</em>.
                 </p>
 
-                <div class="work-meta">
-
-                    <span>
-                        Solar PV
-                    </span>
-
-                    <span>
-                        Energy Systems
-                    </span>
-
-                    <span>
-                        System Design
-                    </span>
-
-                </div>
-
-                <a href="#contact" class="arrow-link">
-                    More information
-                    <span>↓</span>
-                </a>
-
-            </div>
-
-        </article>
+            </article>
 
 
-        <!-- SMALL PROJECTS -->
+            <article class="news-row">
 
-        <div class="other-work">
+                <time>2025</time>
 
-            <div class="other-work-heading">
-                <span>OTHER PROJECTS</span>
-            </div>
+                <p>
+                    Achieved 3rd position in the
+                    Firm Mechanization Idea Competition.
+                </p>
 
-
-            <a
-                href="https://github.com/nadirafarjana/AgroSmart-Solar-Powered-Intelligent-Agricultural-System"
-                target="_blank"
-                class="other-project"
-            >
-                <span>AgroSmart</span>
-                <small>Solar-powered intelligent agriculture</small>
-                <b>↗</b>
-            </a>
+            </article>
 
 
-            <a
-                href="https://github.com/nadirafarjana/Arduino-Based-Wireless-Environmental-Monitoring-and-Methane-Gas-Detection-Using-Bluetooth"
-                target="_blank"
-                class="other-project"
-            >
-                <span>Environmental Monitoring</span>
-                <small>Arduino · Sensors · Bluetooth</small>
-                <b>↗</b>
-            </a>
+            <article class="news-row">
 
+                <time>2024</time>
 
-            <a
-                href="https://github.com/nadirafarjana/IoT-Based-Biogas-Plant-Monitoring-System"
-                target="_blank"
-                class="other-project"
-            >
-                <span>IoT Biogas Monitoring</span>
-                <small>IoT · Energy · Monitoring</small>
-                <b>↗</b>
-            </a>
+                <p>
+                    Champion at the JSTU EEE Day
+                    Project Showcasing.
+                </p>
 
-
-            <a
-                href="https://github.com/nadirafarjana/SolarTrack-Arduino-Based-Automatic-Solar-Tracking-System"
-                target="_blank"
-                class="other-project"
-            >
-                <span>SolarTrack</span>
-                <small>Automatic solar tracking system</small>
-                <b>↗</b>
-            </a>
-
-
-            <a
-                href="https://github.com/nadirafarjana/Automatic-Fire-Detection-and-Suppression-System"
-                target="_blank"
-                class="other-project"
-            >
-                <span>FireGuard</span>
-                <small>Automatic fire detection & suppression</small>
-                <b>↗</b>
-            </a>
+            </article>
 
         </div>
 
@@ -687,40 +479,30 @@
 </section>
 
 
-<!-- =========================================================
+<!-- ======================================================
      PUBLICATIONS
-========================================================= -->
+====================================================== -->
 
-<section class="editorial-section publication-section" id="publications">
+<section class="section publications" id="publications">
 
-    <div class="section-marker">
+    <div class="section-label">
         <span>04</span>
-        PUBLICATIONS
+        Publications
     </div>
 
 
-    <div class="section-content">
-
-        <div class="section-introduction">
-
-            <h2>
-                Selected
-                <span>publications.</span>
-            </h2>
-
-        </div>
-
+    <div class="section-main">
 
         <div class="publication-list">
 
 
-            <article class="publication">
+            <article class="publication-row">
 
-                <div class="publication-year">
+                <div class="pub-year">
                     2025
                 </div>
 
-                <div class="publication-body">
+                <div class="pub-content">
 
                     <h3>
                         Numerical simulation and performance
@@ -736,10 +518,8 @@
                     <a
                         href="https://doi.org/10.1016/j.solener.2025.113539"
                         target="_blank"
-                        class="arrow-link"
                     >
-                        DOI
-                        <span>↗</span>
+                        DOI ↗
                     </a>
 
                 </div>
@@ -747,13 +527,13 @@
             </article>
 
 
-            <article class="publication">
+            <article class="publication-row">
 
-                <div class="publication-year">
+                <div class="pub-year">
                     2026
                 </div>
 
-                <div class="publication-body">
+                <div class="pub-content">
 
                     <h3>
                         Device modeling and performance analysis
@@ -772,13 +552,13 @@
             </article>
 
 
-            <article class="publication">
+            <article class="publication-row">
 
-                <div class="publication-year">
+                <div class="pub-year">
                     2026
                 </div>
 
-                <div class="publication-body">
+                <div class="pub-content">
 
                     <h3>
                         Computational Analysis, Performance
@@ -802,92 +582,267 @@
 </section>
 
 
-<!-- =========================================================
-     NEWS / ACHIEVEMENTS
-========================================================= -->
+<!-- ======================================================
+     PROJECTS
+====================================================== -->
 
-<section class="editorial-section news-section" id="news">
+<section class="section projects" id="projects">
 
-    <div class="section-marker">
+    <div class="section-label">
         <span>05</span>
-        NEWS & ACHIEVEMENTS
+        Selected Projects
     </div>
 
 
-    <div class="section-content">
+    <div class="section-main">
 
-        <div class="news-list">
+        <div class="projects-intro">
+
+            <h2>
+                Selected
+                <em>work.</em>
+            </h2>
+
+        </div>
 
 
-            <div class="news-item">
+        <div class="project-list">
+
+
+            <a
+                href="https://github.com/nadirafarjana/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-Learning"
+                target="_blank"
+                class="project-row"
+            >
+
+                <span class="project-number">
+                    01
+                </span>
+
+                <div class="project-title">
+                    An Integrated Assistive System
+                    for Visually Impaired Individuals
+                </div>
+
+                <div class="project-type">
+                    AI · Robotics
+                </div>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/nadirafarjana/AgroSmart-Solar-Powered-Intelligent-Agricultural-System"
+                target="_blank"
+                class="project-row"
+            >
+
+                <span class="project-number">
+                    02
+                </span>
+
+                <div class="project-title">
+                    AgroSmart
+                </div>
+
+                <div class="project-type">
+                    Solar · IoT · Agriculture
+                </div>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/nadirafarjana/Arduino-Based-Wireless-Environmental-Monitoring-and-Methane-Gas-Detection-Using-Bluetooth"
+                target="_blank"
+                class="project-row"
+            >
+
+                <span class="project-number">
+                    03
+                </span>
+
+                <div class="project-title">
+                    Wireless Environmental Monitoring
+                </div>
+
+                <div class="project-type">
+                    Arduino · Sensors
+                </div>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/nadirafarjana/IoT-Based-Biogas-Plant-Monitoring-System"
+                target="_blank"
+                class="project-row"
+            >
+
+                <span class="project-number">
+                    04
+                </span>
+
+                <div class="project-title">
+                    IoT-Based Biogas Plant Monitoring
+                </div>
+
+                <div class="project-type">
+                    IoT · Energy
+                </div>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/nadirafarjana/SolarTrack-Arduino-Based-Automatic-Solar-Tracking-System"
+                target="_blank"
+                class="project-row"
+            >
+
+                <span class="project-number">
+                    05
+                </span>
+
+                <div class="project-title">
+                    SolarTrack
+                </div>
+
+                <div class="project-type">
+                    Solar · Embedded Systems
+                </div>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/nadirafarjana/Automatic-Fire-Detection-and-Suppression-System"
+                target="_blank"
+                class="project-row"
+            >
+
+                <span class="project-number">
+                    06
+                </span>
+
+                <div class="project-title">
+                    FireGuard
+                </div>
+
+                <div class="project-type">
+                    Automation · Safety
+                </div>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     AWARDS
+====================================================== -->
+
+<section class="section awards" id="awards">
+
+    <div class="section-label">
+        <span>06</span>
+        Awards & Honors
+    </div>
+
+
+    <div class="section-main">
+
+        <div class="award-list">
+
+            <div class="award-row">
 
                 <time>2025</time>
 
-                <p>
-                    Published research on CsBi₃I₁₀-based
-                    heterojunction solar cells in
-                    <em>Solar Energy</em>.
-                </p>
+                <div>
+                    <strong>3rd Position</strong>
+                    <p>Firm Mechanization Idea Competition</p>
+                </div>
 
             </div>
 
 
-            <div class="news-item">
-
-                <time>2025</time>
-
-                <p>
-                    3rd Position — Firm Mechanization
-                    Idea Competition.
-                </p>
-
-            </div>
-
-
-            <div class="news-item">
+            <div class="award-row">
 
                 <time>2024</time>
 
-                <p>
-                    Champion — JSTU EEE Day
-                    Project Showcasing.
-                </p>
+                <div>
+                    <strong>Champion</strong>
+                    <p>JSTU EEE Day Project Showcasing</p>
+                </div>
 
             </div>
 
 
-            <div class="news-item">
+            <div class="award-row">
 
                 <time>2024</time>
 
-                <p>
-                    1st Position — Innovation
-                    Showcasing Program.
-                </p>
+                <div>
+                    <strong>1st Position</strong>
+                    <p>Innovation Showcasing Program</p>
+                </div>
 
             </div>
 
 
-            <div class="news-item">
+            <div class="award-row">
 
                 <time>2024</time>
 
-                <p>
-                    2nd Position — Agricultural Machineries
-                    Exhibition & Talent Exploration Idea Contest.
-                </p>
+                <div>
+                    <strong>2nd Position</strong>
+                    <p>
+                        Agricultural Machineries Exhibition &
+                        Talent Exploration Idea Contest
+                    </p>
+                </div>
 
             </div>
 
 
-            <div class="news-item">
+            <div class="award-row">
 
                 <time>2023</time>
 
-                <p>
-                    Champion — National Conference on
-                    Robotics & IoT.
-                </p>
+                <div>
+                    <strong>Champion</strong>
+                    <p>
+                        National Conference on Robotics & IoT
+                    </p>
+                </div>
 
             </div>
 
@@ -898,98 +853,98 @@
 </section>
 
 
-<!-- =========================================================
+<!-- ======================================================
      CONTACT
-========================================================= -->
+====================================================== -->
 
-<section class="contact-section" id="contact">
+<section class="contact" id="contact">
 
-    <div class="contact-inner">
+    <div class="contact-top">
 
-        <div class="contact-number">
-            06
-        </div>
+        <span>
+            07
+        </span>
 
-        <div class="contact-content">
+        <span>
+            Contact
+        </span>
 
-            <p class="contact-label">
-                CONTACT
-            </p>
+    </div>
 
-            <h2>
-                Let's connect
-                <em>around research.</em>
-            </h2>
 
-            <p>
-                I am interested in research collaborations,
-                graduate research opportunities, engineering
-                projects and conversations around computational
-                materials, photovoltaics and intelligent systems.
-            </p>
+    <div class="contact-content">
 
-            <a
-                href="mailto:nadirafarjanaiva@gmail.com"
-                class="email-link"
-            >
-                nadirafarjanaiva@gmail.com
-                <span>↗</span>
-            </a>
+        <h2>
+            Let's talk
+            <em>research.</em>
+        </h2>
 
-            <div class="social-links">
+        <p>
+            For research collaborations, graduate research
+            opportunities, engineering projects or academic
+            conversations:
+        </p>
 
-                <a
-                    href="https://github.com/nadirafarjana"
-                    target="_blank"
-                >
-                    GitHub ↗
-                </a>
+        <a
+            href="mailto:nadirafarjanaiva@gmail.com"
+            class="contact-email"
+        >
+            nadirafarjanaiva@gmail.com
+            ↗
+        </a>
 
-                <a
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                >
-                    LinkedIn ↗
-                </a>
+    </div>
 
-                <a
-                    href="assets/Nadira Farjana.pdf"
-                    target="_blank"
-                >
-                    CV ↗
-                </a>
 
-            </div>
+    <div class="contact-links">
 
-        </div>
+        <a
+            href="https://github.com/nadirafarjana"
+            target="_blank"
+        >
+            GitHub ↗
+        </a>
+
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+        >
+            LinkedIn ↗
+        </a>
+
+        <a
+            href="assets/Nadira Farjana.pdf"
+            target="_blank"
+        >
+            CV ↗
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- =========================================================
+<!-- ======================================================
      FOOTER
-========================================================= -->
+====================================================== -->
 
 <footer>
 
-    <div>
+    <span>
         NADIRA FARJANA
-    </div>
+    </span>
 
-    <div>
+    <span>
         ELECTRICAL & ELECTRONIC ENGINEERING
-    </div>
+    </span>
 
-    <div>
+    <span>
         © <span id="year"></span>
-    </div>
+    </span>
 
 </footer>
 
 </main>
-
 
 <script src="script.js"></script>
 
