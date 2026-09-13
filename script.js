@@ -1,534 +1,144 @@
 /* =========================================================
-   NADIRA FARJANA — PORTFOLIO
-   Main JavaScript
+   NADIRA FARJANA
+   Editorial Academic Portfolio
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =====================================================
-       01. ELEMENTS
-    ===================================================== */
+    const menuButton = document.getElementById("menuButton");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-    const header = document.getElementById("site-header");
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-
-    const navLinks = document.querySelectorAll(
-        "#navMenu a"
-    );
+    const mobileLinks = mobileMenu.querySelectorAll("a");
 
 
-    /* =====================================================
-       02. HEADER SCROLL EFFECT
-    ===================================================== */
+    /* -------------------------------------------------------
+       MOBILE MENU
+    ------------------------------------------------------- */
 
-    function updateHeader() {
-
-        if (!header) {
-            return;
-        }
-
-        if (window.scrollY > 20) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
+    function openMenu() {
+        mobileMenu.classList.add("open");
+        document.body.style.overflow = "hidden";
     }
 
-    updateHeader();
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        { passive: true }
-    );
-
-
-    /* =====================================================
-       03. MOBILE MENU
-    ===================================================== */
-
-    if (menuToggle && navMenu) {
-
-        menuToggle.addEventListener("click", () => {
-
-            const isOpen =
-                navMenu.classList.toggle("open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close navigation"
-                    : "Open navigation"
-            );
-
-            menuToggle.textContent =
-                isOpen ? "CLOSE" : "MENU";
-        });
-
-
-        /* Close menu after clicking a navigation link */
-
-        navLinks.forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navMenu.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation"
-                );
-
-                menuToggle.textContent = "MENU";
-            });
-
-        });
-
-
-        /* Close menu when clicking outside */
-
-        document.addEventListener("click", event => {
-
-            const clickedInsideMenu =
-                navMenu.contains(event.target);
-
-            const clickedToggle =
-                menuToggle.contains(event.target);
-
-            if (
-                !clickedInsideMenu &&
-                !clickedToggle &&
-                navMenu.classList.contains("open")
-            ) {
-
-                navMenu.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation"
-                );
-
-                menuToggle.textContent = "MENU";
-            }
-        });
-
+    function closeNavigation() {
+        mobileMenu.classList.remove("open");
+        document.body.style.overflow = "";
     }
 
+    menuButton.addEventListener("click", openMenu);
 
-    /* =====================================================
-       04. CLOSE MOBILE MENU ON RESIZE
-    ===================================================== */
+    closeMenu.addEventListener("click", closeNavigation);
 
-    window.addEventListener("resize", () => {
-
-        if (
-            window.innerWidth > 850 &&
-            navMenu &&
-            menuToggle
-        ) {
-
-            navMenu.classList.remove("open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation"
-            );
-
-            menuToggle.textContent = "MENU";
-        }
+    mobileLinks.forEach(link => {
+        link.addEventListener("click", closeNavigation);
     });
 
 
-    /* =====================================================
-       05. SMOOTH INTERNAL NAVIGATION
-    ===================================================== */
+    /* -------------------------------------------------------
+       ESCAPE KEY
+    ------------------------------------------------------- */
 
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(link => {
+    document.addEventListener("keydown", event => {
 
-        link.addEventListener("click", event => {
-
-            const targetID =
-                link.getAttribute("href");
-
-            if (
-                !targetID ||
-                targetID === "#"
-            ) {
-                return;
-            }
-
-            const target =
-                document.querySelector(targetID);
-
-            if (!target) {
-                return;
-            }
-
-            event.preventDefault();
-
-            const headerHeight =
-                header
-                    ? header.offsetHeight
-                    : 0;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.pageYOffset -
-                headerHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-
-        });
+        if (event.key === "Escape") {
+            closeNavigation();
+        }
 
     });
 
 
-    /* =====================================================
-       06. ACTIVE NAVIGATION
-    ===================================================== */
+    /* -------------------------------------------------------
+       SCROLL REVEAL
+    ------------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll(
+        ".editorial-section, .work-feature, .publication, .news-item, .contact-content"
+    );
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("reveal");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.08,
+            rootMargin: "0px 0px -50px 0px"
+        }
+    );
+
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+
+    /* -------------------------------------------------------
+       CURRENT YEAR
+    ------------------------------------------------------- */
+
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+
+    /* -------------------------------------------------------
+       ACTIVE SECTION
+    ------------------------------------------------------- */
 
     const sections = document.querySelectorAll(
-        "main section[id]"
+        "section[id]"
     );
 
-
-    function updateActiveNavigation() {
-
-        if (!sections.length) {
-            return;
-        }
-
-        const scrollPosition =
-            window.scrollY +
-            (header ? header.offsetHeight : 0) +
-            100;
-
-        let currentSection = "";
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop;
-
-            const sectionBottom =
-                sectionTop +
-                section.offsetHeight;
-
-            if (
-                scrollPosition >= sectionTop &&
-                scrollPosition < sectionBottom
-            ) {
-                currentSection =
-                    section.getAttribute("id");
-            }
-
-        });
-
-
-        navLinks.forEach(link => {
-
-            const href =
-                link.getAttribute("href");
-
-            link.classList.remove("active");
-
-            if (
-                href === `#${currentSection}`
-            ) {
-                link.classList.add("active");
-            }
-
-        });
-
-    }
-
-    updateActiveNavigation();
-
-    window.addEventListener(
-        "scroll",
-        updateActiveNavigation,
-        { passive: true }
+    const navLinks = document.querySelectorAll(
+        ".desktop-nav a[href^='#']"
     );
 
+    const sectionObserver = new IntersectionObserver(
+        entries => {
 
-    /* =====================================================
-       07. REVEAL ANIMATIONS
-    ===================================================== */
+            entries.forEach(entry => {
 
-    const revealElements =
-        document.querySelectorAll(
-            ".section-head, " +
-            ".about-grid, " +
-            ".research-row, " +
-            ".feature, " +
-            ".work-card, " +
-            ".project-table a, " +
-            ".publication, " +
-            ".achievement-list article, " +
-            ".contact-grid"
-        );
+                if (entry.isIntersecting) {
 
-
-    /*
-        Respect users who prefer reduced motion.
-    */
-
-    const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
-
-
-    if (
-        !prefersReducedMotion &&
-        "IntersectionObserver" in window
-    ) {
-
-        revealElements.forEach(element => {
-
-            element.style.opacity = "0";
-
-            element.style.transform =
-                "translateY(25px)";
-
-            element.style.transition =
-                "opacity 0.7s ease, " +
-                "transform 0.7s ease";
-
-        });
-
-
-        const observer =
-            new IntersectionObserver(
-                entries => {
-
-                    entries.forEach(entry => {
-
-                        if (!entry.isIntersecting) {
-                            return;
-                        }
-
-                        entry.target.style.opacity =
-                            "1";
-
-                        entry.target.style.transform =
-                            "translateY(0)";
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
                     });
 
-                },
-                {
-                    threshold: 0.08,
-                    rootMargin: "0px 0px -40px 0px"
-                }
-            );
-
-
-        revealElements.forEach(element => {
-            observer.observe(element);
-        });
-
-    }
-
-
-    /* =====================================================
-       08. CURRENT YEAR
-    ===================================================== */
-
-    const footerYear =
-        document.querySelector(
-            "footer .footer-inner span"
-        );
-
-
-    if (footerYear) {
-
-        const currentYear =
-            new Date().getFullYear();
-
-        footerYear.textContent =
-            `© ${currentYear} Nadira Farjana`;
-    }
-
-
-    /* =====================================================
-       09. IMAGE ERROR HANDLING
-    ===================================================== */
-
-    const images =
-        document.querySelectorAll("img");
-
-
-    images.forEach(image => {
-
-        image.addEventListener(
-            "error",
-            () => {
-
-                /*
-                    Prevent broken images from creating
-                    an ugly browser icon.
-
-                    The container remains visible so the
-                    missing asset can easily be identified
-                    and replaced later.
-                */
-
-                image.style.display = "none";
-
-                const parent =
-                    image.parentElement;
-
-                if (parent) {
-                    parent.classList.add(
-                        "image-missing"
-                    );
-                }
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       10. KEYBOARD ACCESSIBILITY
-    ===================================================== */
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape" &&
-                navMenu &&
-                navMenu.classList.contains("open")
-            ) {
-
-                navMenu.classList.remove("open");
-
-                if (menuToggle) {
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
+                    const activeLink = document.querySelector(
+                        `.desktop-nav a[href="#${entry.target.id}"]`
                     );
 
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        "Open navigation"
-                    );
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
 
-                    menuToggle.textContent =
-                        "MENU";
                 }
-            }
 
+            });
+
+        },
+        {
+            threshold: 0.15
         }
     );
 
 
-    /* =====================================================
-       11. EXTERNAL LINKS
-    ===================================================== */
-
-    document.querySelectorAll(
-        'a[target="_blank"]'
-    ).forEach(link => {
-
-        if (!link.hasAttribute("rel")) {
-
-            link.setAttribute(
-                "rel",
-                "noopener noreferrer"
-            );
-
-        }
-
+    sections.forEach(section => {
+        sectionObserver.observe(section);
     });
-
-
-    /* =====================================================
-       12. HERO PARALLAX — DESKTOP ONLY
-    ===================================================== */
-
-    const heroImage =
-        document.querySelector(
-            ".hero-image-wrap"
-        );
-
-
-    if (
-        heroImage &&
-        !prefersReducedMotion
-    ) {
-
-        window.addEventListener(
-            "scroll",
-            () => {
-
-                if (window.innerWidth <= 850) {
-                    return;
-                }
-
-                const scroll =
-                    window.scrollY;
-
-                /*
-                    Keep movement extremely subtle.
-                    This avoids making the site feel like
-                    a template or presentation website.
-                */
-
-                if (scroll < window.innerHeight) {
-
-                    heroImage.style.transform =
-                        `translateY(${scroll * 0.045}px)`;
-                }
-
-            },
-            { passive: true }
-        );
-
-    }
-
-
-    /* =====================================================
-       13. INITIAL PAGE STATE
-    ===================================================== */
-
-    document.body.classList.add(
-        "page-ready"
-    );
 
 });
