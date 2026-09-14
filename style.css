@@ -2053,5 +2053,62 @@ button:focus-visible {
 
 
 /* =========================================================
+   FINAL DESKTOP LAYOUT FIX
+   ========================================================= */
+
+@media (min-width: 801px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .site-shell {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 280px;
+        height: 100vh;
+        height: 100dvh;
+
+        z-index: 1000;
+    }
+
+    .main-content {
+        position: relative;
+
+        width: calc(100% - 280px);
+
+        margin-left: 280px;
+
+        padding-left: 70px;
+        padding-right: 70px;
+
+        min-height: 100vh;
+
+        overflow: visible;
+    }
+
+    .main-content > * {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-footer {
+        width: calc(100% - 280px);
+
+        margin-left: 280px;
+
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+/* =========================================================
    END
    ========================================================= */
