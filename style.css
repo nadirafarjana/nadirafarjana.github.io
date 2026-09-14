@@ -1185,3 +1185,79 @@ p {
         background: white;
     }
 }
+
+/* =========================================================
+   HOME PAGE ONLY — V2.2 POSITIONING FIX
+   Do not affect About, Research, Projects, etc.
+========================================================= */
+
+.home-page {
+    overflow-x: hidden;
+}
+
+/* Keep the fixed V2.2 sidebar exactly where it is.
+   Move ONLY the Home content into the correct area. */
+
+.home-page .main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Make sure Home sections never extend underneath
+   the sidebar because of accidental negative margins. */
+
+.home-page .hero-section,
+.home-page .home-section,
+.home-page .home-contact,
+.home-page .site-footer {
+    margin-left: 0;
+    box-sizing: border-box;
+}
+
+/* Hero content */
+
+.home-page .hero-section {
+    width: 100%;
+    max-width: none;
+}
+
+/* Prevent oversized Home typography from causing
+   horizontal overflow on laptop screens. */
+
+.home-page .hero-section h1 {
+    max-width: 1100px;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+/* Keep paragraphs inside the actual Home content area */
+
+.home-page .hero-description,
+.home-page .home-section > p,
+.home-page .home-card p {
+    max-width: 100%;
+}
+
+/* =========================================================
+   HOME PAGE RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .home-page .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .home-page .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
