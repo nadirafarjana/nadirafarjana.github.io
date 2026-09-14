@@ -1,32 +1,110 @@
+/* =========================================================
+   NADIRA FARJANA — SITE SCRIPT
+   Version 2.2
+   ========================================================= */
+
 document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.querySelector(".sidebar");
-    const menuButton = document.querySelector(".menu-button");
 
-    if (menuButton && sidebar) {
+    /* -----------------------------------------------------
+       Mobile menu
+       ----------------------------------------------------- */
+
+    const menuButton = document.querySelector(".mobile-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (menuButton && mobileMenu) {
         menuButton.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
+            const isOpen = mobileMenu.classList.toggle("open");
 
-            const isOpen = sidebar.classList.contains("open");
-            menuButton.setAttribute("aria-expanded", isOpen);
-            menuButton.textContent = isOpen ? "CLOSE" : "MENU";
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            menuButton.textContent = isOpen ? "×" : "☰";
         });
 
-        document.querySelectorAll(".sidebar-nav a").forEach(link => {
+        mobileMenu.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                sidebar.classList.remove("open");
-                menuButton.textContent = "MENU";
+                mobileMenu.classList.remove("open");
                 menuButton.setAttribute("aria-expanded", "false");
+                menuButton.textContent = "☰";
             });
         });
     }
 
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    /* -----------------------------------------------------
+       Active navigation
+       ----------------------------------------------------- */
 
-    document.querySelectorAll(".sidebar-nav a").forEach(link => {
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav a, .mobile-menu a").forEach(link => {
         const href = link.getAttribute("href");
 
-        if (href === currentPage) {
+        if (
+            href === currentPage ||
+            (currentPage === "" && href === "index.html")
+        ) {
             link.classList.add("active");
         }
     });
+
+    /* -----------------------------------------------------
+       Image lightbox
+       ----------------------------------------------------- */
+
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+
+    lightbox.innerHTML = `
+        <button class="lightbox-close" aria-label="Close image">×</button>
+        <img src="" alt="">
+    `;
+
+    document.body.appendChild(lightbox);
+
+    const lightboxImage = lightbox.querySelector("img");
+    const lightboxClose = lightbox.querySelector(".lightbox-close");
+
+    document.querySelectorAll("[data-lightbox]").forEach(image => {
+
+        image.style.cursor = "zoom-in";
+
+        image.addEventListener("click", () => {
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt || "";
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+    };
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+    /* -----------------------------------------------------
+       Current year
+       ----------------------------------------------------- */
+
+    document.querySelectorAll("[data-year]").forEach(element => {
+        element.textContent = new Date().getFullYear();
+    });
+
 });
