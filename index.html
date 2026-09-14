@@ -21,10 +21,795 @@
 
     <link rel="stylesheet" href="style.css">
 
+
+    <!-- =====================================================
+         HOME PAGE ONLY
+         This keeps the index layout independent and stable.
+         ===================================================== -->
+
+    <style>
+
+        /* -------------------------------------------------
+           HOME PAGE LAYOUT
+           ------------------------------------------------- */
+
+        .home-main {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .home-container {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 70px;
+        }
+
+
+        /* -------------------------------------------------
+           HOME HERO
+           ------------------------------------------------- */
+
+        .home-hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 0;
+        }
+
+        .home-hero-grid {
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.15fr)
+                minmax(280px, 0.85fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        /* LEFT SIDE */
+
+        .home-hero-text {
+            min-width: 0;
+        }
+
+        .home-kicker {
+
+            color: var(--accent);
+
+            font-family: var(--mono);
+
+            font-size: 0.68rem;
+
+            letter-spacing: 0.12em;
+
+            line-height: 1.5;
+        }
+
+        .home-title {
+
+            margin-top: 22px;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                3rem,
+                5.2vw,
+                5.8rem
+            );
+
+            font-weight: 400;
+
+            line-height: 0.98;
+
+            letter-spacing: -0.045em;
+
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        .home-title-muted {
+            color: var(--muted);
+        }
+
+        .home-description {
+
+            max-width: 650px;
+
+            margin-top: 30px;
+
+            color: var(--muted);
+
+            font-size: 1rem;
+
+            line-height: 1.85;
+        }
+
+
+        /* BUTTONS */
+
+        .home-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 32px;
+        }
+
+
+        /* RIGHT IMAGE */
+
+        .home-hero-photo {
+
+            width: 100%;
+
+            max-width: 430px;
+
+            margin-left: auto;
+
+            border: 1px solid var(--border);
+
+            background: var(--surface);
+        }
+
+        .home-hero-photo img {
+
+            display: block;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+        }
+
+
+        /* -------------------------------------------------
+           HOME INTRO
+           ------------------------------------------------- */
+
+        .home-intro {
+
+            padding: 95px 0;
+
+            border-top: 1px solid var(--border);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .home-intro p {
+
+            max-width: 1000px;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                2rem,
+                3.5vw,
+                3.5rem
+            );
+
+            line-height: 1.15;
+
+            letter-spacing: -0.03em;
+        }
+
+
+        /* -------------------------------------------------
+           HOME RESEARCH AREAS
+           ------------------------------------------------- */
+
+        .home-section {
+
+            padding: 95px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .home-section-heading {
+
+            display: grid;
+
+            grid-template-columns:
+                0.65fr
+                1.35fr;
+
+            gap: 50px;
+
+            margin-bottom: 45px;
+        }
+
+        .home-section-number {
+
+            color: #9aa19d;
+
+            font-family: var(--mono);
+
+            font-size: 0.68rem;
+        }
+
+        .home-section-title {
+
+            max-width: 750px;
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                2rem,
+                3.5vw,
+                3.5rem
+            );
+
+            font-weight: 400;
+
+            line-height: 1.08;
+
+            letter-spacing: -0.035em;
+        }
+
+        .home-section-description {
+
+            max-width: 650px;
+
+            margin-top: 18px;
+
+            color: var(--muted);
+
+            font-size: 0.95rem;
+        }
+
+
+        /* RESEARCH ROWS */
+
+        .home-research-list {
+
+            border-top: 1px solid var(--border);
+        }
+
+        .home-research-item {
+
+            display: grid;
+
+            grid-template-columns:
+                55px
+                minmax(0, 1fr)
+                minmax(180px, 0.55fr);
+
+            gap: 30px;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            align-items: start;
+        }
+
+        .home-research-number {
+
+            color: #9aa19d;
+
+            font-family: var(--mono);
+
+            font-size: 0.68rem;
+        }
+
+        .home-research-item h3 {
+
+            font-family: var(--serif);
+
+            font-size: 1.5rem;
+
+            font-weight: 400;
+
+            line-height: 1.2;
+        }
+
+        .home-research-item p {
+
+            margin-top: 10px;
+
+            max-width: 620px;
+
+            color: var(--muted);
+
+            font-size: 0.84rem;
+        }
+
+        .home-research-tools {
+
+            color: #8b938f;
+
+            font-family: var(--mono);
+
+            font-size: 0.58rem;
+
+            line-height: 1.8;
+
+            text-align: right;
+
+            letter-spacing: 0.04em;
+        }
+
+
+        /* -------------------------------------------------
+           FEATURED WORK
+           ------------------------------------------------- */
+
+        .home-feature {
+
+            padding: 95px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .home-feature-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 35px;
+        }
+
+        .home-feature-card {
+
+            border: 1px solid var(--border);
+
+            background: var(--surface);
+        }
+
+        .home-feature-image {
+
+            width: 100%;
+
+            height: 280px;
+
+            overflow: hidden;
+        }
+
+        .home-feature-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .home-feature-content {
+
+            padding: 28px;
+        }
+
+        .home-feature-label {
+
+            color: var(--accent);
+
+            font-family: var(--mono);
+
+            font-size: 0.6rem;
+
+            letter-spacing: 0.08em;
+        }
+
+        .home-feature-content h3 {
+
+            margin-top: 12px;
+
+            font-family: var(--serif);
+
+            font-size: 1.7rem;
+
+            font-weight: 400;
+
+            line-height: 1.2;
+        }
+
+        .home-feature-content p {
+
+            margin-top: 12px;
+
+            color: var(--muted);
+
+            font-size: 0.84rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* -------------------------------------------------
+           HOME PUBLICATION
+           ------------------------------------------------- */
+
+        .home-publication {
+
+            padding: 95px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .home-publication-entry {
+
+            display: grid;
+
+            grid-template-columns: 80px minmax(0, 1fr);
+
+            gap: 35px;
+
+            padding-top: 30px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .home-publication-year {
+
+            color: #8b938f;
+
+            font-family: var(--mono);
+
+            font-size: 0.68rem;
+        }
+
+        .home-publication-status {
+
+            color: var(--accent);
+
+            font-family: var(--mono);
+
+            font-size: 0.6rem;
+
+            letter-spacing: 0.08em;
+        }
+
+        .home-publication-entry h3 {
+
+            max-width: 850px;
+
+            margin-top: 12px;
+
+            font-family: var(--serif);
+
+            font-size: 1.5rem;
+
+            font-weight: 400;
+
+            line-height: 1.35;
+        }
+
+        .home-publication-meta {
+
+            margin-top: 10px;
+
+            color: var(--muted);
+
+            font-size: 0.8rem;
+        }
+
+
+        /* -------------------------------------------------
+           HOME CONTACT
+           ------------------------------------------------- */
+
+        .home-contact {
+
+            padding: 90px 0;
+
+            background: var(--accent);
+
+            color: white;
+        }
+
+        .home-contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr
+                0.9fr;
+
+            gap: 70px;
+        }
+
+        .home-contact h2 {
+
+            font-family: var(--serif);
+
+            font-size: clamp(
+                2.5rem,
+                5vw,
+                4.8rem
+            );
+
+            font-weight: 400;
+
+            line-height: 1;
+
+            letter-spacing: -0.04em;
+        }
+
+        .home-contact p {
+
+            max-width: 600px;
+
+            margin-top: 18px;
+
+            color: #d9e4de;
+
+            font-size: 0.9rem;
+        }
+
+        .home-email {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding-bottom: 5px;
+
+            border-bottom: 1px solid rgba(
+                255,
+                255,
+                255,
+                .4
+            );
+
+            font-family: var(--serif);
+
+            font-size: 1.25rem;
+
+            color: white;
+        }
+
+        .home-contact-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .home-contact-links a {
+
+            color: #dfe9e4;
+
+            font-size: 0.85rem;
+        }
+
+        .home-contact-links a:hover {
+
+            color: white;
+        }
+
+
+        /* -------------------------------------------------
+           HOME FOOTER
+           ------------------------------------------------- */
+
+        .home-footer {
+
+            margin-left: var(--sidebar-width);
+
+            border-top: 1px solid var(--border);
+
+            background: var(--surface);
+        }
+
+        .home-footer-inner {
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding: 22px 70px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #89918c;
+
+            font-family: var(--mono);
+
+            font-size: 0.6rem;
+        }
+
+
+        /* =================================================
+           LAPTOP
+           ================================================= */
+
+        @media (max-width: 1100px) {
+
+            .home-container {
+
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+
+            .home-hero-grid {
+
+                grid-template-columns:
+                    minmax(0, 1fr)
+                    minmax(240px, 0.75fr);
+
+                gap: 45px;
+            }
+
+            .home-title {
+
+                font-size: clamp(
+                    2.8rem,
+                    5vw,
+                    4.8rem
+                );
+            }
+
+            .home-footer-inner {
+
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+
+
+        /* =================================================
+           TABLET / MOBILE
+           ================================================= */
+
+        @media (max-width: 800px) {
+
+            .home-main {
+
+                margin-left: 0;
+
+                width: 100%;
+            }
+
+            .home-container {
+
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .home-hero {
+
+                min-height: auto;
+
+                padding: 75px 0;
+            }
+
+            .home-hero-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .home-hero-photo {
+
+                max-width: 480px;
+
+                margin-left: 0;
+            }
+
+            .home-section-heading {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+            }
+
+            .home-research-item {
+
+                grid-template-columns:
+                    40px
+                    minmax(0, 1fr);
+            }
+
+            .home-research-tools {
+
+                grid-column: 2;
+
+                text-align: left;
+            }
+
+            .home-feature-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .home-contact-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .home-footer {
+
+                margin-left: 0;
+            }
+
+            .home-footer-inner {
+
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+
+
+        /* =================================================
+           SMALL MOBILE
+           ================================================= */
+
+        @media (max-width: 500px) {
+
+            .home-container {
+
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .home-title {
+
+                font-size: 3rem;
+            }
+
+            .home-intro {
+
+                padding: 65px 0;
+            }
+
+            .home-section,
+            .home-feature,
+            .home-publication {
+
+                padding: 65px 0;
+            }
+
+            .home-publication-entry {
+
+                grid-template-columns: 1fr;
+
+                gap: 8px;
+            }
+
+            .home-footer-inner {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+
+    </style>
+
 </head>
 
 
 <body>
+
 
 <div class="site-shell">
 
@@ -50,7 +835,7 @@
     </header>
 
 
-    <!-- MOBILE NAVIGATION -->
+    <!-- MOBILE MENU -->
 
     <nav class="mobile-menu">
 
@@ -91,7 +876,7 @@
 
 
     <!-- =====================================================
-         DESKTOP SIDEBAR
+         SIDEBAR
          ===================================================== -->
 
     <aside class="sidebar">
@@ -128,7 +913,10 @@
 
         <nav class="nav">
 
-            <a href="index.html">
+            <a
+                href="index.html"
+                class="active"
+            >
                 <span>01</span>
                 Home
             </a>
@@ -187,7 +975,7 @@
                     class="sidebar-link"
                     href="https://github.com/nadirafarjana"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                 >
                     <strong>GitHub</strong> — Research &amp; Projects
                 </a>
@@ -212,43 +1000,62 @@
 
 
     <!-- =====================================================
-         MAIN CONTENT
+         HOME MAIN
          ===================================================== -->
 
-    <main class="main-content">
-
-        <div class="main-inner">
+    <main class="home-main">
 
 
-            <!-- HERO -->
-
-            <section class="hero">
-
-                <div class="hero-grid">
+        <div class="home-container">
 
 
-                    <div>
+            <!-- =================================================
+                 HERO
+                 ================================================= -->
 
-                        <p class="hero-kicker">
+            <section class="home-hero">
+
+                <div class="home-hero-grid">
+
+
+                    <!-- LEFT -->
+
+                    <div class="home-hero-text">
+
+                        <p class="home-kicker">
                             ELECTRICAL &amp; ELECTRONIC ENGINEERING
                         </p>
 
-                        <h1>
-                            Researching<br>
-                            <span>materials, devices</span><br>
+
+                        <h1 class="home-title">
+
+                            Researching
+                            <br>
+
+                            <span class="home-title-muted">
+                                materials, devices
+                            </span>
+
+                            <br>
+
                             &amp; intelligent systems.
+
                         </h1>
 
-                        <p class="hero-lead">
-                            I work across computational materials research,
-                            photovoltaic device engineering, artificial
-                            intelligence, robotics and sustainable energy
-                            systems. My work combines simulation, numerical
-                            analysis and practical engineering.
+
+                        <p class="home-description">
+
+                            I work across computational materials
+                            research, photovoltaic device engineering,
+                            artificial intelligence, robotics and
+                            sustainable energy systems. My work combines
+                            simulation, numerical analysis and practical
+                            engineering.
+
                         </p>
 
 
-                        <div class="hero-actions">
+                        <div class="home-actions">
 
                             <a
                                 class="button primary"
@@ -270,7 +1077,10 @@
                     </div>
 
 
-                    <div class="hero-image">
+
+                    <!-- RIGHT -->
+
+                    <div class="home-hero-photo">
 
                         <img
                             src="assets/profile.jpg"
@@ -279,50 +1089,59 @@
 
                     </div>
 
+
                 </div>
 
             </section>
 
 
 
-            <!-- STATEMENT -->
+            <!-- =================================================
+                 INTRODUCTION
+                 ================================================= -->
 
-            <section class="statement">
+            <section class="home-intro">
 
                 <p>
-                    My research focuses on the investigation of emerging
-                    semiconductor materials, photovoltaic device modelling,
-                    machine-learning-assisted analysis and practical
-                    intelligent systems.
+                    My research connects computational materials science,
+                    photovoltaic engineering, artificial intelligence,
+                    robotics and sustainable energy systems.
                 </p>
 
             </section>
 
 
 
-            <!-- RESEARCH OVERVIEW -->
+            <!-- =================================================
+                 RESEARCH AREAS
+                 ================================================= -->
 
-            <section class="section">
+            <section class="home-section">
 
-                <div class="section-header">
+
+                <div class="home-section-heading">
 
                     <div>
-                        <p class="section-number">
+
+                        <p class="home-section-number">
                             01 — RESEARCH
                         </p>
+
                     </div>
+
 
                     <div>
 
-                        <h2 class="section-title">
+                        <h2 class="home-section-title">
                             Research at the intersection of
                             materials, devices and intelligence.
                         </h2>
 
-                        <p class="section-intro">
-                            My work connects computational materials science,
-                            photovoltaic engineering, artificial intelligence,
-                            robotics and sustainable energy systems.
+                        <p class="home-section-description">
+                            My current work spans computational
+                            investigation of semiconductor materials,
+                            photovoltaic device modelling, machine
+                            learning and practical intelligent systems.
                         </p>
 
                     </div>
@@ -330,14 +1149,18 @@
                 </div>
 
 
-                <div class="research-list">
+
+                <div class="home-research-list">
 
 
-                    <article class="research-row">
+                    <!-- ITEM 01 -->
 
-                        <span class="research-number">
+                    <article class="home-research-item">
+
+                        <span class="home-research-number">
                             01
                         </span>
+
 
                         <div>
 
@@ -348,52 +1171,63 @@
 
                             <p>
                                 First-principles investigation of emerging
-                                semiconductor and photovoltaic materials,
-                                together with device-level simulation and
-                                performance analysis.
+                                semiconductor materials and photovoltaic
+                                absorbers, combined with device-level
+                                simulation and performance analysis.
                             </p>
 
                         </div>
 
-                        <span class="research-tools">
+
+                        <span class="home-research-tools">
                             DFT · QUANTUM ESPRESSO · SCAPS-1D
                         </span>
 
                     </article>
 
 
-                    <article class="research-row">
 
-                        <span class="research-number">
+                    <!-- ITEM 02 -->
+
+                    <article class="home-research-item">
+
+                        <span class="home-research-number">
                             02
                         </span>
+
 
                         <div>
 
                             <h3>
-                                AI, Computer Vision &amp; Robotics
+                                Artificial Intelligence,
+                                Computer Vision &amp; Robotics
                             </h3>
 
                             <p>
-                                Deep learning, object detection, computer
-                                vision, autonomous navigation and embedded
-                                intelligent systems for practical applications.
+                                Deep learning, object detection,
+                                computer vision, autonomous navigation
+                                and embedded intelligent systems.
                             </p>
 
                         </div>
 
-                        <span class="research-tools">
+
+                        <span class="home-research-tools">
                             YOLO · PYTHON · OPENCV · RASPBERRY PI
                         </span>
 
                     </article>
 
 
-                    <article class="research-row">
 
-                        <span class="research-number">
+                    <!-- ITEM 03 -->
+
+                    <article class="home-research-item">
+
+                        <span class="home-research-number">
                             03
                         </span>
+
 
                         <div>
 
@@ -403,14 +1237,15 @@
                             </h3>
 
                             <p>
-                                Photovoltaics, off-grid systems, energy
-                                monitoring, environmental sensing and
+                                Photovoltaics, off-grid energy systems,
+                                environmental monitoring, IoT and
                                 sustainable engineering solutions.
                             </p>
 
                         </div>
 
-                        <span class="research-tools">
+
+                        <span class="home-research-tools">
                             SOLAR · IOT · EMBEDDED SYSTEMS
                         </span>
 
@@ -423,35 +1258,50 @@
 
 
 
-            <!-- FEATURED PROJECT -->
+            <!-- =================================================
+                 FEATURED WORK
+                 ================================================= -->
 
-            <section class="section">
+            <section class="home-feature">
 
-                <div class="section-header">
+
+                <div class="home-section-heading">
 
                     <div>
-                        <p class="section-number">
-                            02 — FEATURED PROJECT
+
+                        <p class="home-section-number">
+                            02 — FEATURED WORK
                         </p>
+
                     </div>
 
+
                     <div>
 
-                        <h2 class="section-title">
-                            Engineering research
-                            with practical impact.
+                        <h2 class="home-section-title">
+                            Selected engineering projects.
                         </h2>
+
+                        <p class="home-section-description">
+                            Practical systems developed across AI,
+                            robotics, renewable energy and embedded
+                            engineering.
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <div class="project-cards">
 
-                    <article class="project-card">
+                <div class="home-feature-grid">
 
-                        <div class="project-card-image">
+
+                    <!-- ASSISTIVE SYSTEM -->
+
+                    <article class="home-feature-card">
+
+                        <div class="home-feature-image">
 
                             <img
                                 src="assets/Projects/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-Learning/Autonomous car on customise track.png"
@@ -460,16 +1310,19 @@
 
                         </div>
 
-                        <div class="project-card-body">
 
-                            <p class="project-card-label">
+                        <div class="home-feature-content">
+
+                            <p class="home-feature-label">
                                 AI · ROBOTICS · COMPUTER VISION
                             </p>
+
 
                             <h3>
                                 Integrated Assistive System for
                                 Visually Impaired Individuals
                             </h3>
+
 
                             <p>
                                 An intelligent assistive platform combining
@@ -478,11 +1331,12 @@
                                 GPS tracking and safety functions.
                             </p>
 
+
                             <a
                                 class="button"
                                 href="https://github.com/nadirafarjana/An-Integrated-Assistive-System-for-Visually-Impaired-Individuals-Using-Autonomous-Navigation-Deep-L"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                                 style="margin-top:20px;"
                             >
                                 View repository →
@@ -493,9 +1347,12 @@
                     </article>
 
 
-                    <article class="project-card">
 
-                        <div class="project-card-image">
+                    <!-- SOLAR -->
+
+                    <article class="home-feature-card">
+
+                        <div class="home-feature-image">
 
                             <img
                                 src="assets/Projects/Design, Set up and Analysis of Off-Grid Solar System/RERC.jpeg"
@@ -504,25 +1361,31 @@
 
                         </div>
 
-                        <div class="project-card-body">
 
-                            <p class="project-card-label">
-                                PHOTOVOLTAICS · RENEWABLE ENERGY
+                        <div class="home-feature-content">
+
+                            <p class="home-feature-label">
+                                RENEWABLE ENERGY · PHOTOVOLTAICS
                             </p>
 
+
                             <h3>
-                                Off-Grid Solar Energy System
+                                Design, Setup &amp; Analysis of
+                                an Off-Grid Solar System
                             </h3>
 
+
                             <p>
-                                Design, setup and analysis of an off-grid
-                                photovoltaic system for independent power
-                                generation and energy management.
+                                Design and practical analysis of an
+                                off-grid photovoltaic system for
+                                independent power generation and
+                                energy management.
                             </p>
 
                         </div>
 
                     </article>
+
 
                 </div>
 
@@ -530,28 +1393,34 @@
 
 
 
-            <!-- PUBLICATION PREVIEW -->
+            <!-- =================================================
+                 PUBLICATION
+                 ================================================= -->
 
-            <section class="section">
+            <section class="home-publication">
 
-                <div class="section-header">
+
+                <div class="home-section-heading">
 
                     <div>
-                        <p class="section-number">
-                            03 — PUBLICATIONS
+
+                        <p class="home-section-number">
+                            03 — PUBLICATION
                         </p>
+
                     </div>
 
+
                     <div>
 
-                        <h2 class="section-title">
-                            Selected research outputs.
+                        <h2 class="home-section-title">
+                            Selected research output.
                         </h2>
 
-                        <p class="section-intro">
-                            Published, submitted and ongoing research in
-                            photovoltaic device modelling and computational
-                            materials.
+                        <p class="home-section-description">
+                            Research in photovoltaic device simulation,
+                            semiconductor materials and machine-learning
+                            assisted analysis.
                         </p>
 
                     </div>
@@ -559,70 +1428,113 @@
                 </div>
 
 
-                <div class="publication-list">
+
+                <article class="home-publication-entry">
 
 
-                    <article class="publication">
-
-                        <div class="publication-year">
-                            2025
-                        </div>
-
-                        <div>
-
-                            <p class="publication-status">
-                                PUBLISHED · SOLAR ENERGY
-                            </p>
-
-                            <h3>
-                                Numerical simulation and performance
-                                enhancement of CsBi₃I₁₀-based heterojunction
-                                solar cell with various semiconductor layers
-                                along with machine learning-based analysis
-                            </h3>
-
-                            <p class="publication-meta">
-                                Solar Energy, Volume 295,
-                                Article 113539.
-                            </p>
-
-                            <a
-                                class="button"
-                                href="https://doi.org/10.1016/j.solener.2025.113539"
-                                target="_blank"
-                                rel="noopener"
-                                style="margin-top:18px;"
-                            >
-                                DOI →
-                            </a>
-
-                        </div>
-
-                    </article>
+                    <div class="home-publication-year">
+                        2025
+                    </div>
 
 
-                    <article class="publication">
+                    <div>
 
-                        <div class="publication-year">
-                            2026
-                        </div>
+                        <p class="home-publication-status">
+                            PUBLISHED · SOLAR ENERGY
+                        </p>
 
-                        <div>
 
-                            <p class="publication-status">
-                                SUBMITTED
-                            </p>
+                        <h3>
+                            Numerical simulation and performance
+                            enhancement of CsBi₃I₁₀-based
+                            heterojunction solar cell with various
+                            semiconductor layers along with machine
+                            learning-based analysis
+                        </h3>
 
-                            <h3>
-                                Device modeling and performance analysis
-                                of CsGeI₂Br-based single junction and
-                                CsGeI₂Br/GaAs-based heterojunction
-                                perovskite solar cells.
-                            </h3>
 
-                        </div>
+                        <p class="home-publication-meta">
+                            Solar Energy, Volume 295,
+                            Article 113539.
+                        </p>
 
-                    </article>
+
+                        <a
+                            class="button"
+                            href="https://doi.org/10.1016/j.solener.2025.113539"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style="margin-top:18px;"
+                        >
+                            DOI →
+                        </a>
+
+                    </div>
+
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONTACT
+                 ================================================= -->
+
+            <section class="home-contact">
+
+
+                <div class="home-contact-grid">
+
+
+                    <div>
+
+                        <h2>
+                            Let's connect.
+                        </h2>
+
+
+                        <p>
+                            For research collaboration, academic
+                            opportunities, project discussions or
+                            professional inquiries.
+                        </p>
+
+
+                        <a
+                            class="home-email"
+                            href="mailto:nadirafarjanaiva@gmail.com"
+                        >
+                            nadirafarjanaiva@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="home-contact-links">
+
+                        <a href="about.html">
+                            About me →
+                        </a>
+
+                        <a href="research.html">
+                            Research →
+                        </a>
+
+                        <a href="projects.html">
+                            Projects →
+                        </a>
+
+                        <a href="publications.html">
+                            Publications →
+                        </a>
+
+                        <a href="contact.html">
+                            Contact →
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -640,21 +1552,22 @@
          FOOTER
          ===================================================== -->
 
-    <footer class="site-footer">
+    <footer class="home-footer">
 
-        <div class="footer-inner">
+        <div class="home-footer-inner">
 
             <span>
                 Nadira Farjana · Academic Portfolio
             </span>
 
             <span>
-                © <span data-current-year>2026</span>
+                © 2026
             </span>
 
         </div>
 
     </footer>
+
 
 
     <!-- BACK TO TOP -->
